@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var BtnPlay: UIButton!
+    @IBOutlet weak var BtnHowPlay: UIButton!
+    @IBOutlet weak var BtnYourResults: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
