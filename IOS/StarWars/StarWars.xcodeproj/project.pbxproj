@@ -13,6 +13,7 @@
 		4E5874C81B1871B2000A7916 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5874C71B1871B2000A7916 /* Images.xcassets */; };
 		4E5874CB1B1871B2000A7916 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5874C91B1871B2000A7916 /* LaunchScreen.xib */; };
 		4E5874D71B1871B2000A7916 /* StarWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5874D61B1871B2000A7916 /* StarWarsTests.swift */; };
+		4EA571781B1BC1E6007C70AE /* HowPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4E5874D01B1871B2000A7916 /* StarWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5874D51B1871B2000A7916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5874D61B1871B2000A7916 /* StarWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsTests.swift; sourceTree = "<group>"; };
+		4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowPlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				4E5874C01B1871B2000A7916 /* AppDelegate.swift */,
 				4E5874C21B1871B2000A7916 /* ViewController.swift */,
+				4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */,
 				4E5874C41B1871B2000A7916 /* Main.storyboard */,
 				4E5874C71B1871B2000A7916 /* Images.xcassets */,
 				4E5874C91B1871B2000A7916 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5874C31B1871B2000A7916 /* ViewController.swift in Sources */,
+				4EA571781B1BC1E6007C70AE /* HowPlayViewController.swift in Sources */,
 				4E5874C11B1871B2000A7916 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				4E5874DC1B1871B2000A7916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E5874DD1B1871B2000A7916 /* Build configuration list for PBXNativeTarget "StarWarsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				4E5874DF1B1871B2000A7916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
