@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -17,23 +16,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        SwApi.People(1, response: { (data: JSON) -> () in
-            println("====DATA FOR PEOPLE 1====");
-            println(data);
-        });
-        
-        
-        GoogleImageApi.getPicture("Sky walker", response: { (data : JSON) -> () in
-            println("====IMAGE FOR Sky walker ====");
-            println(data[0]["url"]);
-        });
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

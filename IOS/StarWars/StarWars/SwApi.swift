@@ -37,4 +37,25 @@ struct SwApi {
         }
     }
     
+    /*
+    ******
+    * Get Information of all People
+    ******
+    */
+    static func Peoples(pageId:Int, response: (JSON) ->()){
+        
+        let urlAPI = NSURL(string: SwApi.baseUrl + "people/?page=" + String(pageId));
+        
+        Alamofire.request(.GET, urlAPI!, parameters: nil, encoding: .JSON)
+            .responseJSON { (_, _, data, error) in
+                if error == nil {
+                    let jsonData = JSON(data!)
+                    response(jsonData)
+                }else{
+                    println("\(error)")
+                }
+        }
+        
+    }
+    
 }
