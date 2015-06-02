@@ -25,19 +25,35 @@ class PlayViewController: UIViewController {
     }
     
     func initGame(){
-        let randomPage:UInt32   = arc4random_uniform(9);
-        let randomPeople:UInt32 = arc4random_uniform(10);
+        let randomPage:UInt32                       = arc4random_uniform(9);
+        let randomPeople:UInt32                     = arc4random_uniform(10);
+        var peopleInfo:Dictionary<String,String>    = Dictionary<String,String>();
         
-        SwApi.Peoples(randomPage, response: { (data: JSON) -> () in
+        // PEOPLE INFORMATION
+        SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
             
-            let goodName:String             = data["results"][Int(randomPeople)]["name"].stringValue;
-            let goodColoreyes:String        = data["results"][Int(randomPeople)]["eye_color"].stringValue;
-            let goodSizePeople:String       = data["results"][Int(randomPeople)]["height"].stringValue;
-            let goodWeightPeople:String     = data["results"][Int(randomPeople)]["mass"].stringValue;
-            let goodSkinColorPeople:String  = data["results"][Int(randomPeople)]["skin_color"].stringValue;
+            peopleInfo["name"]          = people["results"][Int(randomPeople)]["name"].stringValue;
+            peopleInfo["eye_color"]     = people["results"][Int(randomPeople)]["eye_color"].stringValue;
+            peopleInfo["height"]        = people["results"][Int(randomPeople)]["height"].stringValue;
+            peopleInfo["mass"]          = people["results"][Int(randomPeople)]["mass"].stringValue;
+            peopleInfo["skin_color"]    = people["results"][Int(randomPeople)]["skin_color"].stringValue;
+            peopleInfo["gender"]        = people["results"][Int(randomPeople)]["gender"].stringValue;
+            peopleInfo["hair_color"]    = people["results"][Int(randomPeople)]["hair_color"].stringValue;
             
-            SwApi.Planet(data["results"][Int(randomPeople)]["homeworld"].stringValue, response: { (planetData: JSON) -> () in
-                let goodPlanetName = planetData["name"].stringValue;
+            // PLANET
+            SwApi.Planet(people["results"][Int(randomPeople)]["homeworld"].stringValue, response: { (planetData: JSON) -> () in
+                
+                peopleInfo["planet"] = planetData["name"].stringValue;
+                
+                // PICTURE
+                GoogleImageApi.getPicture(people["results"][Int(randomPeople)]["name"].stringValue, response: { (pictures: JSON) -> () in
+                    
+                    peopleInfo["picture"] = pictures[0]["url"].stringValue;
+                    
+                    println(peopleInfo);
+                    
+                });
+                
             });
             
         });
