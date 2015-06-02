@@ -4,6 +4,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
+        <!--The Game-->
+        <scene sceneID="mZM-kg-9bN">
+            <objects>
+                <viewController id="BxN-N6-UCy" customClass="PlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pa9-VK-qRy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gUj-bW-iCw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1J0-uo-VbF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="The Game" id="oFl-au-2kI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHv-fL-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="346"/>
+        </scene>
         <!--Yoda's Box-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -16,17 +35,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9o-uz-mqA">
-                                <rect key="frame" x="16" y="121" width="288" height="30"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xJL-gb-qUy" kind="push" id="EEl-AB-xkG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-g2-YSV">
                                 <rect key="frame" x="16" y="159" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,6 +46,17 @@
                                     <segue destination="rRb-uC-9rQ" kind="push" id="73b-fS-Xh4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9o-uz-mqA">
+                                <rect key="frame" x="16" y="121" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BxN-N6-UCy" kind="push" id="qAg-OW-HSW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -46,33 +65,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="742" y="346"/>
-        </scene>
-        <!--The Game-->
-        <scene sceneID="tSv-Xi-dec">
-            <objects>
-                <viewController id="xJL-gb-qUy" customClass="PlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qrQ-Rp-Poy"/>
-                        <viewControllerLayoutGuide type="bottom" id="rP0-KG-hh9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Twx-MR-8ch">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYx-gN-0La">
-                                <rect key="frame" x="530" y="94" width="34" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="The Game" id="pLZ-50-THn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dnQ-A4-QqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="329" y="346"/>
         </scene>
         <!--How Play-->
         <scene sceneID="M5k-Qk-ZMX">
