@@ -11,8 +11,8 @@ import SwiftyJSON
 
 class PlayViewController: UIViewController {
     
-    let peoplePerPage   = 10;
-    let peopleCount     = 86;
+    let score:Int = 0;
+    
 
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -25,21 +25,23 @@ class PlayViewController: UIViewController {
     }
     
     func initGame(){
+        let randomPage:UInt32   = arc4random_uniform(9);
+        let randomPeople:UInt32 = arc4random_uniform(10);
         
-//        let totalPages:Int  = ceil(self.peopleCount / self.peoplePerPage); // TODO Fix it
-//        let randomPeople    = arc4random_uniform(peopleCount);
+        SwApi.Peoples(randomPage, response: { (data: JSON) -> () in
+            
+            let goodName:String             = data["results"][Int(randomPeople)]["name"].stringValue;
+            let goodColoreyes:String        = data["results"][Int(randomPeople)]["eye_color"].stringValue;
+            let goodSizePeople:String       = data["results"][Int(randomPeople)]["height"].stringValue;
+            let goodWeightPeople:String     = data["results"][Int(randomPeople)]["mass"].stringValue;
+            let goodSkinColorPeople:String  = data["results"][Int(randomPeople)]["skin_color"].stringValue;
+            
+            SwApi.Planet(data["results"][Int(randomPeople)]["homeworld"].stringValue, response: { (planetData: JSON) -> () in
+                let goodPlanetName = planetData["name"].stringValue;
+            });
+            
+        });
         
     }
 
 }
-
-//        SwApi.People(1, response: { (data: JSON) -> () in
-//            println("====DATA FOR PEOPLE 1====");
-//            println(data);
-//        });
-//
-//
-//        GoogleImageApi.getPicture("Sky walker", response: { (data : JSON) -> () in
-//            println("====IMAGE FOR Sky walker ====");
-//            println(data[0]["url"]);
-//        });

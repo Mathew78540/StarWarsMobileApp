@@ -42,11 +42,32 @@ struct SwApi {
     * Get Information of all People
     ******
     */
-    static func Peoples(pageId:Int, response: (JSON) ->()){
+    static func Peoples(pageId:UInt32, response: (JSON) ->()){
         
         let urlAPI = NSURL(string: SwApi.baseUrl + "people/?page=" + String(pageId));
         
         Alamofire.request(.GET, urlAPI!, parameters: nil, encoding: .JSON)
+            .responseJSON { (_, _, data, error) in
+                if error == nil {
+                    let jsonData = JSON(data!)
+                    response(jsonData)
+                }else{
+                    println("\(error)")
+                }
+        }
+        
+    }
+    
+    /*
+    ******
+    * Get Information of the planet
+    ******
+    */
+    static func Planet(url:String, response: (JSON) ->()){
+        
+        let urlAPI = NSURL(string: url+"?format=json")!;
+        
+        Alamofire.request(.GET, urlAPI, parameters: nil, encoding: .JSON)
             .responseJSON { (_, _, data, error) in
                 if error == nil {
                     let jsonData = JSON(data!)
