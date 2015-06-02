@@ -82,7 +82,19 @@
                     <view key="view" contentMode="scaleToFill" id="Twx-MR-8ch">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Devine qui est ce personnage. hmmm." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPX-kX-KwO">
+                                <rect key="frame" x="16" y="106" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FPX-kX-KwO" secondAttribute="centerX" id="Ohw-jH-d04"/>
+                            <constraint firstAttribute="width" secondItem="FPX-kX-KwO" secondAttribute="width" id="pI6-N3-IXj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Le jeu" id="pLZ-50-THn"/>
                 </viewController>

@@ -13,7 +13,6 @@ class PlayViewController: UIViewController {
     
     let score:Int = 0;
     
-
     override func viewDidLoad() {
         super.viewDidLoad();
         self.initGame(); // Init the game
@@ -39,14 +38,15 @@ class PlayViewController: UIViewController {
             peopleInfo["skin_color"]    = people["results"][Int(randomPeople)]["skin_color"].stringValue;
             peopleInfo["gender"]        = people["results"][Int(randomPeople)]["gender"].stringValue;
             peopleInfo["hair_color"]    = people["results"][Int(randomPeople)]["hair_color"].stringValue;
+            peopleInfo["homeworld"]     = people["results"][Int(randomPeople)]["homeworld"].stringValue;
             
             // PLANET
-            SwApi.Planet(people["results"][Int(randomPeople)]["homeworld"].stringValue, response: { (planetData: JSON) -> () in
+            SwApi.Planet(peopleInfo["homeworld"]!, response: { (planetData: JSON) -> () in
                 
                 peopleInfo["planet"] = planetData["name"].stringValue;
                 
                 // PICTURE
-                GoogleImageApi.getPicture(people["results"][Int(randomPeople)]["name"].stringValue, response: { (pictures: JSON) -> () in
+                GoogleImageApi.getPicture(peopleInfo["name"]!, response: { (pictures: JSON) -> () in
                     
                     peopleInfo["picture"] = pictures[0]["url"].stringValue;
                     
