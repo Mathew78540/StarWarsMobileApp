@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class PlayViewController: UIViewController {
     
-    let score:Int = 0;
+    var score:Int = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -59,5 +59,5 @@ class PlayViewController: UIViewController {
         });
         
     }
-
+    
 }

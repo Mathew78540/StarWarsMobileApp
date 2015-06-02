@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="L4Z-Uv-vS1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="L4Z-Uv-vS1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -13,63 +13,15 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95L-qt-ZHC">
-                                <rect key="frame" x="16" y="213" width="568" height="49"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Jouer">
-                                    <color key="titleColor" red="0.92549026010000002" green="0.94117653369999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xJL-gb-qUy" kind="push" id="LNA-Ju-XIu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B5-lK-bmK">
-                                <rect key="frame" x="16" y="275" width="568" height="49"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Comment jouer">
-                                    <color key="titleColor" red="0.92549026010000002" green="0.94117653369999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rRb-uC-9rQ" kind="push" id="bHS-eD-HPX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMN-44-VeY">
-                                <rect key="frame" x="16" y="338" width="568" height="49"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Vos résultats">
-                                    <color key="titleColor" red="0.92549026010000002" green="0.94117653369999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xlu-XO-LaU" kind="push" id="BIT-py-JHj"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="95L-qt-ZHC" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="A4o-3E-f2H"/>
-                            <constraint firstAttribute="width" secondItem="4B5-lK-bmK" secondAttribute="width" id="K0c-Rt-6qv"/>
-                            <constraint firstAttribute="centerX" secondItem="EMN-44-VeY" secondAttribute="centerX" id="OTA-bg-Obf"/>
-                            <constraint firstAttribute="centerX" secondItem="95L-qt-ZHC" secondAttribute="centerX" id="RRZ-kq-uDy"/>
-                            <constraint firstAttribute="centerX" secondItem="4B5-lK-bmK" secondAttribute="centerX" id="TN1-Wf-qvU"/>
-                            <constraint firstItem="EMN-44-VeY" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="xee-Fa-raq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Accueil" id="wmf-lg-hbb"/>
-                    <connections>
-                        <outlet property="BtnHowPlay" destination="4B5-lK-bmK" id="LSZ-gG-Pv4"/>
-                        <outlet property="BtnPlay" destination="95L-qt-ZHC" id="tEb-br-ent"/>
-                        <outlet property="BtnYourResults" destination="EMN-44-VeY" id="F6c-1C-s2c"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="366"/>
+            <point key="canvasLocation" x="742" y="346"/>
         </scene>
         <!--Le jeu-->
         <scene sceneID="tSv-Xi-dec">
@@ -80,27 +32,23 @@
                         <viewControllerLayoutGuide type="bottom" id="rP0-KG-hh9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Twx-MR-8ch">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Devine qui est ce personnage. hmmm." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPX-kX-KwO">
-                                <rect key="frame" x="16" y="106" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYx-gN-0La">
+                                <rect key="frame" x="530" y="94" width="34" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="FPX-kX-KwO" secondAttribute="centerX" id="Ohw-jH-d04"/>
-                            <constraint firstAttribute="width" secondItem="FPX-kX-KwO" secondAttribute="width" id="pI6-N3-IXj"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Le jeu" id="pLZ-50-THn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnQ-A4-QqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="1147"/>
+            <point key="canvasLocation" x="273.06666666666666" y="1085.8266666666666"/>
         </scene>
         <!--Comment Jouer-->
         <scene sceneID="M5k-Qk-ZMX">
@@ -111,27 +59,15 @@
                         <viewControllerLayoutGuide type="bottom" id="FH3-r0-6er"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lKH-uc-ycl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="BlaBlaBla" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ko-iw-G6A">
-                                <rect key="frame" x="16" y="162" width="568" height="275"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="8Ko-iw-G6A" secondAttribute="centerX" id="72v-1u-iDR"/>
-                            <constraint firstAttribute="width" secondItem="8Ko-iw-G6A" secondAttribute="width" id="D8p-4B-XCd"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Comment Jouer" id="Tjx-74-w0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-fr-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2147" y="366"/>
+            <point key="canvasLocation" x="1145.0666666666666" y="346.48000000000002"/>
         </scene>
         <!--Vos résultats-->
         <scene sceneID="J0k-IQ-M7O">
@@ -142,7 +78,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xZi-Ku-sjJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rhV-HY-SFD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -150,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-8C-uxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="1147"/>
+            <point key="canvasLocation" x="742.39999999999998" y="1085.8266666666666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Si-CD-Uav">
@@ -168,7 +104,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUp-Yk-iQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="-491"/>
+            <point key="canvasLocation" x="615.4666666666667" y="-377.71999999999997"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
