@@ -18,7 +18,6 @@
 		4E8AC6C11B1C9C2F00ADF588 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8AC6C01B1C9C2F00ADF588 /* Helpers.swift */; };
 		4EA571781B1BC1E6007C70AE /* HowPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */; };
 		4EA5717C1B1BC62D007C70AE /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5717B1B1BC62D007C70AE /* PlayViewController.swift */; };
-		4EA5717E1B1BC698007C70AE /* YourResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5717D1B1BC698007C70AE /* YourResultsViewController.swift */; };
 		A9CC7CACADB1C5BAF6E959CE /* Pods_StarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2AD9822C9E74E5E6741357 /* Pods_StarWars.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,7 +48,6 @@
 		4E8AC6C01B1C9C2F00ADF588 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowPlayViewController.swift; sourceTree = "<group>"; };
 		4EA5717B1B1BC62D007C70AE /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
-		4EA5717D1B1BC698007C70AE /* YourResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourResultsViewController.swift; sourceTree = "<group>"; };
 		89E62433DA959F6B336BE3CE /* Pods-StarWars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars/Pods-StarWars.debug.xcconfig"; sourceTree = "<group>"; };
 		8C2AD9822C9E74E5E6741357 /* Pods_StarWars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,7 +145,6 @@
 			children = (
 				4E5874C21B1871B2000A7916 /* ViewController.swift */,
 				4EA5717B1B1BC62D007C70AE /* PlayViewController.swift */,
-				4EA5717D1B1BC698007C70AE /* YourResultsViewController.swift */,
 				4EA571771B1BC1E6007C70AE /* HowPlayViewController.swift */,
 			);
 			name = Views;
@@ -327,7 +324,6 @@
 				4E8AC6C11B1C9C2F00ADF588 /* Helpers.swift in Sources */,
 				4E5874C11B1871B2000A7916 /* AppDelegate.swift in Sources */,
 				4E8AC6BD1B1C884E00ADF588 /* GoogleImageApi.swift in Sources */,
-				4EA5717E1B1BC698007C70AE /* YourResultsViewController.swift in Sources */,
 				4E62EE431B1C79D90055D082 /* SwApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

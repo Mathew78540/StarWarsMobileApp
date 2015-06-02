@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Accueil-->
+        <!--Yoda's Box-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,17 +13,41 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9o-uz-mqA">
+                                <rect key="frame" x="16" y="121" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xJL-gb-qUy" kind="push" id="EEl-AB-xkG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-g2-YSV">
+                                <rect key="frame" x="16" y="159" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="How Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rRb-uC-9rQ" kind="push" id="73b-fS-Xh4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Accueil" id="wmf-lg-hbb"/>
+                    <navigationItem key="navigationItem" title="Yoda's Box" id="wmf-lg-hbb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="742" y="346"/>
         </scene>
-        <!--Le jeu-->
+        <!--The Game-->
         <scene sceneID="tSv-Xi-dec">
             <objects>
                 <viewController id="xJL-gb-qUy" customClass="PlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +56,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rP0-KG-hh9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Twx-MR-8ch">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYx-gN-0La">
@@ -44,13 +68,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Le jeu" id="pLZ-50-THn"/>
+                    <navigationItem key="navigationItem" title="The Game" id="pLZ-50-THn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnQ-A4-QqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.06666666666666" y="1085.8266666666666"/>
+            <point key="canvasLocation" x="329" y="346"/>
         </scene>
-        <!--Comment Jouer-->
+        <!--How Play-->
         <scene sceneID="M5k-Qk-ZMX">
             <objects>
                 <viewController id="rRb-uC-9rQ" customClass="HowPlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,41 +83,24 @@
                         <viewControllerLayoutGuide type="bottom" id="FH3-r0-6er"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lKH-uc-ycl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Comment Jouer" id="Tjx-74-w0x"/>
+                    <navigationItem key="navigationItem" title="How Play" id="Tjx-74-w0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-fr-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145.0666666666666" y="346.48000000000002"/>
-        </scene>
-        <!--Vos résultats-->
-        <scene sceneID="J0k-IQ-M7O">
-            <objects>
-                <viewController id="xlu-XO-LaU" customClass="YourResultsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zfx-mX-eIA"/>
-                        <viewControllerLayoutGuide type="bottom" id="xZi-Ku-sjJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rhV-HY-SFD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Vos résultats" id="jsh-kK-BgD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-8C-uxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="742.39999999999998" y="1085.8266666666666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Si-CD-Uav">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L4Z-Uv-vS1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yVK-IC-lty">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yVK-IC-lty">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
