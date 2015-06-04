@@ -26,7 +26,31 @@ class PlayViewController: UIViewController {
     }
     
     func initGame(){
-        let randomPage:UInt32                       = arc4random_uniform(9);
+        
+        self.randomPeople {
+            (peopleInfo) in
+            
+            println(peopleInfo);
+            
+            self.randomAnswer {
+                (randomAnswer) in
+                
+                    println(randomAnswer)
+                
+            }
+            
+        }
+        
+    }
+    
+    /*
+     ******
+     * Return Dictionary with random People
+     ******
+     */
+    func randomPeople(callback: ([String:String]) -> Void){
+        
+        let randomPage:UInt32                       = arc4random_uniform(8);
         let randomPeople:UInt32                     = arc4random_uniform(10);
         var peopleInfo:Dictionary<String,String>    = Dictionary<String,String>();
         
@@ -52,7 +76,7 @@ class PlayViewController: UIViewController {
                     
                     peopleInfo["picture"] = pictures[0]["url"].stringValue;
                     
-                    println(peopleInfo);
+                    callback(peopleInfo);
                     
                 });
                 
@@ -62,8 +86,28 @@ class PlayViewController: UIViewController {
         
     }
     
-    func randomPeople(){
-        // Return Dictionary with information of random People :)
+    /*
+    ******
+    * Return Dictionary with two name in random
+    ******
+    */
+    func randomAnswer(callback: ([String]) -> Void){
+        
+        let randomPage:UInt32                       = arc4random_uniform(8);
+        let randomPeople1:UInt32                    = arc4random_uniform(10);
+        let randomPeople2:UInt32                    = arc4random_uniform(10);
+        var peopleInfo                              = [String]()
+        
+        // PEOPLE INFORMATION
+        SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
+            
+            peopleInfo.append(people["results"][Int(randomPeople1)]["name"].stringValue);
+            peopleInfo.append(people["results"][Int(randomPeople2)]["name"].stringValue);
+            
+            callback(peopleInfo);
+
+        });
+        
     }
     
     func endQuizz(){
@@ -71,8 +115,8 @@ class PlayViewController: UIViewController {
     }
     
     func nextQuestion(){
-        score++;
-        self.scoreDiplay.text = String(score);
+        self.score++;
+        self.scoreDiplay.text = String(self.score);
         // TODO Display next Question :)
     }
     
