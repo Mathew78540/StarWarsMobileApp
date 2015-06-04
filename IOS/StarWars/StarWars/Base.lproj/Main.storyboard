@@ -16,9 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="1J0-uo-VbF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeQ-BS-2Uu">
+                                <rect key="frame" x="139" y="38" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="The Game" id="oFl-au-2kI"/>
+                    <connections>
+                        <outlet property="scoreDiplay" destination="AeQ-BS-2Uu" id="IJ8-IU-e4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHv-fL-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-fr-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145.0666666666666" y="346.48000000000002"/>
+            <point key="canvasLocation" x="1145" y="346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Si-CD-Uav">

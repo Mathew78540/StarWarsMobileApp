@@ -13,6 +13,8 @@ class PlayViewController: UIViewController {
     
     var score:Int = 0;
     
+    @IBOutlet weak var scoreDiplay: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         self.initGame(); // Init the game
@@ -58,6 +60,20 @@ class PlayViewController: UIViewController {
             
         });
         
+    }
+    
+    func randomPeople(){
+        // Return Dictionary with information of random People :)
+    }
+    
+    func endQuizz(){
+        // Display the result :)
+    }
+    
+    func nextQuestion(){
+        score++;
+        self.scoreDiplay.text = String(score);
+        // TODO Display next Question :)
     }
     
 }
