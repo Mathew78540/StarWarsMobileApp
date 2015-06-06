@@ -38,11 +38,11 @@
 
 /* Begin PBXFileReference section */
 		26E21EC0594BDE05C5603BF1 /* Pods-StarWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars/Pods-StarWars.release.xcconfig"; sourceTree = "<group>"; };
-		4E3F12DB1B2269E90054F871 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../background.jpg; sourceTree = "<group>"; };
-		4E3F12DD1B226A710054F871 /* background_Score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_Score.png; path = ../../../../../background_Score.png; sourceTree = "<group>"; };
-		4E3F12DF1B226B3F0054F871 /* background_question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_question.png; path = ../../../../../background_question.png; sourceTree = "<group>"; };
-		4E3F12E11B226D660054F871 /* background_liste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_liste.png; path = ../../../../../background_liste.png; sourceTree = "<group>"; };
-		4E3F12E31B226E9F0054F871 /* background_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button.png; path = ../../../../../background_button.png; sourceTree = "<group>"; };
+		4E3F12DB1B2269E90054F871 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = StarWars/Images.xcassets/background.jpg; sourceTree = SOURCE_ROOT; };
+		4E3F12DD1B226A710054F871 /* background_Score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_Score.png; path = StarWars/Images.xcassets/background_Score.png; sourceTree = SOURCE_ROOT; };
+		4E3F12DF1B226B3F0054F871 /* background_question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_question.png; path = StarWars/Images.xcassets/background_question.png; sourceTree = SOURCE_ROOT; };
+		4E3F12E11B226D660054F871 /* background_liste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_liste.png; path = StarWars/Images.xcassets/background_liste.png; sourceTree = SOURCE_ROOT; };
+		4E3F12E31B226E9F0054F871 /* background_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button.png; path = StarWars/Images.xcassets/background_button.png; sourceTree = SOURCE_ROOT; };
 		4E5874BB1B1871B2000A7916 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5874BF1B1871B2000A7916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5874C01B1871B2000A7916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
