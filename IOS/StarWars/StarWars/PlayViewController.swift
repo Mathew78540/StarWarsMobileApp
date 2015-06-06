@@ -13,34 +13,30 @@ class PlayViewController: UIViewController {
     
     var score:Int = 0;
     
-    @IBOutlet weak var scoreDiplay: UILabel!
+    @IBOutlet weak var scoreDisplay: UILabel!
+    @IBOutlet weak var btnThree: UIButton!
+    @IBOutlet weak var btnTwo: UIButton!
+    @IBOutlet weak var btnOne: UIButton!
+    
+    @IBAction func btnOneAction(sender: AnyObject) { nextQuestion(1) }
+    @IBAction func btnTwoAction(sender: AnyObject) { nextQuestion(2) }
+    @IBAction func btnThreeAction(sender: AnyObject) { nextQuestion(3) }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true);
+        //navigationController?.navigationBar.hidden = true; // for navigation bar hide
+        //UIApplication.sharedApplication().statusBarHidden = true; // for status bar hide
+        //navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.5); // Don't work
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.initGame(); // Init the game
+        self.nextQuestion(0); // Init the game
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func initGame(){
-        
-        self.randomPeople {
-            (peopleInfo) in
-            
-            println(peopleInfo);
-            
-            self.randomAnswer {
-                (randomAnswer) in
-                
-                    println(randomAnswer)
-                
-            }
-            
-        }
-        
     }
     
     /*
@@ -114,9 +110,24 @@ class PlayViewController: UIViewController {
         // Display the result :)
     }
     
-    func nextQuestion(){
+    func nextQuestion(id:Int){
         self.score++;
-        self.scoreDiplay.text = String(self.score);
+        self.scoreDisplay.text = String(self.score);
+        
+        //        self.randomPeople {
+        //            (peopleInfo) in
+        //
+        //            println(peopleInfo);
+        //
+        //            self.randomAnswer {
+        //                (randomAnswer) in
+        //
+        //                println(randomAnswer)
+        //                
+        //            }
+        //            
+        //        }
+
         // TODO Display next Question :)
     }
     

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3F12DC1B2269E90054F871 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F12DB1B2269E90054F871 /* background.jpg */; };
+		4E3F12DE1B226A710054F871 /* background_Score.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F12DD1B226A710054F871 /* background_Score.png */; };
+		4E3F12E01B226B3F0054F871 /* background_question.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F12DF1B226B3F0054F871 /* background_question.png */; };
+		4E3F12E21B226D660054F871 /* background_liste.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F12E11B226D660054F871 /* background_liste.png */; };
+		4E3F12E41B226E9F0054F871 /* background_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E3F12E31B226E9F0054F871 /* background_button.png */; };
 		4E5874C11B1871B2000A7916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5874C01B1871B2000A7916 /* AppDelegate.swift */; };
 		4E5874C31B1871B2000A7916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5874C21B1871B2000A7916 /* ViewController.swift */; };
 		4E5874C61B1871B2000A7916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5874C41B1871B2000A7916 /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 
 /* Begin PBXFileReference section */
 		26E21EC0594BDE05C5603BF1 /* Pods-StarWars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars/Pods-StarWars.release.xcconfig"; sourceTree = "<group>"; };
+		4E3F12DB1B2269E90054F871 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = ../../../../../background.jpg; sourceTree = "<group>"; };
+		4E3F12DD1B226A710054F871 /* background_Score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_Score.png; path = ../../../../../background_Score.png; sourceTree = "<group>"; };
+		4E3F12DF1B226B3F0054F871 /* background_question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_question.png; path = ../../../../../background_question.png; sourceTree = "<group>"; };
+		4E3F12E11B226D660054F871 /* background_liste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_liste.png; path = ../../../../../background_liste.png; sourceTree = "<group>"; };
+		4E3F12E31B226E9F0054F871 /* background_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button.png; path = ../../../../../background_button.png; sourceTree = "<group>"; };
 		4E5874BB1B1871B2000A7916 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5874BF1B1871B2000A7916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5874C01B1871B2000A7916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +109,11 @@
 				4EA5717F1B1BC6AC007C70AE /* Views */,
 				4E5874C41B1871B2000A7916 /* Main.storyboard */,
 				4E5874C71B1871B2000A7916 /* Images.xcassets */,
+				4E3F12E31B226E9F0054F871 /* background_button.png */,
+				4E3F12E11B226D660054F871 /* background_liste.png */,
+				4E3F12DF1B226B3F0054F871 /* background_question.png */,
+				4E3F12DD1B226A710054F871 /* background_Score.png */,
+				4E3F12DB1B2269E90054F871 /* background.jpg */,
 				4E5874C91B1871B2000A7916 /* LaunchScreen.xib */,
 				4E5874BE1B1871B2000A7916 /* Supporting Files */,
 				4E8AC6C01B1C9C2F00ADF588 /* Helpers.swift */,
@@ -251,8 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5874C61B1871B2000A7916 /* Main.storyboard in Resources */,
+				4E3F12DC1B2269E90054F871 /* background.jpg in Resources */,
 				4E5874CB1B1871B2000A7916 /* LaunchScreen.xib in Resources */,
+				4E3F12E41B226E9F0054F871 /* background_button.png in Resources */,
+				4E3F12DE1B226A710054F871 /* background_Score.png in Resources */,
+				4E3F12E21B226D660054F871 /* background_liste.png in Resources */,
 				4E5874C81B1871B2000A7916 /* Images.xcassets in Resources */,
+				4E3F12E01B226B3F0054F871 /* background_question.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
