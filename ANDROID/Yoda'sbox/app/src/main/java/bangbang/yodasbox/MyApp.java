@@ -27,7 +27,7 @@ public class MyApp extends Application {
         mVolleyRequestQueue = Volley.newRequestQueue(getApplicationContext());
         mVolleyImageLoader = new ImageLoader(mVolleyRequestQueue, new LruBitmapCache(1024 * 1024 * 1));
 
-        //Démarrage de la queue
+        //Demarrage de la queue
         mVolleyRequestQueue.start();
 
     }

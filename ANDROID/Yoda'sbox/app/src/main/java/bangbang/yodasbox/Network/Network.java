@@ -16,12 +16,14 @@ package bangbang.yodasbox.Network;
 
 public class Network {
 
-    public static final String YODA_SEARCH_INTENT = "yodaSearchResult";
-    public static final String YODA_SEARCH_RESULT_EXTRA = "yodaSearchResultExtra";
+    public static final String YODA_REQUEST_INTENT = "yodaSearchResult";
+    public static final String YODA_SEARCH_RESULT_EXTRA = "yodaExtra";
 
-    public static void requestYoda()
+    public CharacterResultJSON person;
+
+    public void requestYoda(String categorie, int number)
     {
-        String url = "http://swapi.co/api/people/1/?format=json";
+        String url = "http://swapi.co/api/"+ categorie +"/"+ number +"/?format=json";
 
         JacksonRequest<CharacterResultJSON> request = new
                 JacksonRequest<CharacterResultJSON>(Request.Method.GET, url, CharacterResultJSON.class,
@@ -30,12 +32,14 @@ public class Network {
                     public void onResponse(CharacterResultJSON characterResultsJSON) {
                         //Use or store the object UserSession
 
-                        System.out.println(characterResultsJSON.toString());
-                        Intent intent = new Intent(YODA_SEARCH_INTENT);
+
+                        Intent intent = new Intent(YODA_REQUEST_INTENT);
                         intent.putExtra(YODA_SEARCH_RESULT_EXTRA, characterResultsJSON);
 
                         LocalBroadcastManager.getInstance(MyApp.getInstance().getApplicationContext()).sendBroadcast(intent);
+
                     }
+
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
@@ -45,9 +49,8 @@ public class Network {
         });
 
         request.setTag("getUserSessionTag");
-        System.out.println(request);
-        System.out.println(MyApp.getInstance());
         MyApp.getInstance().getRequestQueue().add(request);
+
 
     }
 

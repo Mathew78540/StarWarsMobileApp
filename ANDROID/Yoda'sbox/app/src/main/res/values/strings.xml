@@ -10,4 +10,8 @@
     <string name="title_activity_question">QuestionActivity</string>
     <string name="action_settings">Settings</string>
     <string name="yoda">API Yoda</string>
+
+
+    <string name="undefined">NC</string>
+
 </resources>

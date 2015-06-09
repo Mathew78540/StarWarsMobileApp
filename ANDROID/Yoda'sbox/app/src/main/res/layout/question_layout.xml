@@ -2,21 +2,96 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center" >
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/characters_name"
-        android:text="@string/character_name"
-        android:layout_gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gender"
+                android:text="@string/undefined"
+                android:layout_weight="0.5"
+                android:textColor = "@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hair_color"
+                android:text="@string/undefined"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eye_color"
+                android:text="@string/undefined"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/skin_color"
+                android:text="@string/undefined"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/height"
+                android:text="@string/undefined"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeworld"
+                android:text="@string/undefined"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+
 
     <Button
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="@string/yoda"
-        android:layout_margin="30px"
+        android:text="@string/undefined"
         android:layout_gravity="center"
-        android:id="@+id/yoda" />
+        android:id="@+id/firstChoice" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/undefined"
+        android:layout_gravity="center"
+        android:id="@+id/secondChoice" />
+
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/undefined"
+        android:layout_gravity="center"
+        android:id="@+id/thirdChoice" />
 
 </LinearLayout>
