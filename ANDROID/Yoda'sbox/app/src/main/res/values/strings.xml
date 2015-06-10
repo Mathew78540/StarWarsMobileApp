@@ -13,5 +13,6 @@
 
 
     <string name="undefined">NC</string>
+    <string name="continueGame">Continue</string>
 
 </resources>

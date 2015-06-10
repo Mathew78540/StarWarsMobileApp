@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,48 +17,54 @@ import java.util.List;
 
 public class ResultatQuestionActivity extends Activity {
 
+    private String level;
+    private ArrayList<Integer> listPersonages;
+    private String namePersonage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_layout);
+        setContentView(R.layout.resultat_layout);
 
+
+        // Init views
         TextView textWin = (TextView)findViewById(R.id.test);
         Button playButton = (Button)findViewById(R.id.continueGame);
 
 
-        Bundle extras = getIntent().getExtras();
-        String namePersonage = extras.getString("namePersonage");
+        getExtras();
 
-        //textWin.setText(namePersonage);
-
-        //String[] parts = extras.getString("personagesList").split(",");
-
-        /*
-        ArrayList<Integer> listPersonage = new ArrayList<Integer>();
-        for( int i = 0; i < parts.length; i++)
-        {
-            listPersonage.add(Integer.parseInt(parts[i]));
-        }
-
-        System.out.println(listPersonage);
-        */
-
-
-        /*
+        // Init all vars
+        textWin.setText(namePersonage);
         playButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
-                Intent gameActivity = new Intent(ResultatQuestionActivity.this, QuestionActivity.class);
 
+                Intent gameActivity = new Intent(ResultatQuestionActivity.this, QuestionActivity.class);
+                gameActivity.putExtra("level", level);
+                gameActivity.putExtra("personagesList", listPersonages.toString());
 
                 startActivity(gameActivity);
+
             }
         });
-        */
 
     }
 
+    public void getExtras()
+    {
+        // Get all extra sent by previous activity
+        Bundle extras = getIntent().getExtras();
+        namePersonage = extras.getString("namePersonage");
+        level = extras.getString("level");
+
+        listPersonages = new ArrayList<Integer>();
+        String[] listPersonagesStrings = extras.getString("personagesList").split(",");
+
+        for (int i = 0; i < listPersonagesStrings.length; i++)
+            listPersonages.add(Integer.parseInt(listPersonagesStrings[i].replace("[","").replace("]","").trim()));
+    }
 
 
     @Override
