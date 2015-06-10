@@ -1,11 +1,13 @@
 package bangbang.yodasbox;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.Menu;
@@ -20,6 +22,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import java.util.ArrayList;
 import java.util.Random;
 
+import bangbang.yodasbox.Fragment.DialogsActions;
 import bangbang.yodasbox.Model.CharacterResultJSON;
 import bangbang.yodasbox.Model.PlanetResultJSON;
 import bangbang.yodasbox.Network.Network;
@@ -134,10 +137,17 @@ public class QuestionActivity extends Activity  {
         public void onReceive(Context context, Intent intent) {
 
             queuePerson++;
-
             if(queuePerson == 0)
-            {
                 hidePerson = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+
+            if(queuePerson == 1)
+                fake1Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+
+            if(queuePerson == 2)
+            {
+                fake2Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+                ;
+
 
                 if(hidePerson !=null )
                 {
@@ -149,13 +159,12 @@ public class QuestionActivity extends Activity  {
                     skin_color.setText(hidePerson.getSkin_color());
                     hair_color.setText(hidePerson.getHair_color());
                     height.setText(hidePerson.getHeight());
+
+                    // get planet's name in API
+                    networkAccess.requestYodaPlanet(hidePerson.getHomeworld());
                 }
 
-            }
-
-            if(queuePerson == 1)
-            {
-                fake1Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+                // instanciate first fake person
                 if(fake1Person != null)
                 {
                     if(listChoice.get(0).getText() == getResources().getString(R.string.undefined))
@@ -163,13 +172,7 @@ public class QuestionActivity extends Activity  {
                     else
                         listChoice.get(1).setText(fake1Person.getName());
                 }
-            }
 
-            if(queuePerson == 2)
-            {
-                fake2Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
-                ;
-                networkAccess.requestYodaPlanet(hidePerson.getHomeworld());
                 for( int i = 0; i < listChoice.size(); i++)
                 {
                     if(listChoice.get(i).getText() == getResources().getString(R.string.undefined))
@@ -214,9 +217,14 @@ public class QuestionActivity extends Activity  {
 
 
 
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(), "BACK BUTTON", Toast.LENGTH_SHORT).show();
 
-
-
+        DialogsActions backToMenu = new DialogsActions();
+        FragmentManager manager = getFragmentManager();
+        backToMenu.show(manager, "backToMenuFrag");
+    }
 
 
     @Override

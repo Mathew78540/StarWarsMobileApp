@@ -24,8 +24,7 @@ public class FirstActivity extends Activity {
         {
             @Override
             public void onClick(View view) {
-                Intent gameActivity = new Intent(FirstActivity.this, QuestionActivity.class);
-                startActivity(gameActivity);
+                startActivity(new Intent(FirstActivity.this, QuestionActivity.class));
             }
         });
 

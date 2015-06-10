@@ -15,4 +15,8 @@
     <string name="undefined">NC</string>
     <string name="continueGame">Continue</string>
 
+    <string name="backMenu">Leave the game ?</string>
+
+
+
 </resources>
