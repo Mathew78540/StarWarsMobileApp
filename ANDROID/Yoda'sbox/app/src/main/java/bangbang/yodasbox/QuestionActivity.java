@@ -1,17 +1,15 @@
 package bangbang.yodasbox;
 
+import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,10 +17,11 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 
+
 import java.util.ArrayList;
 import java.util.Random;
 
-import bangbang.yodasbox.Fragment.DialogsActions;
+import bangbang.yodasbox.Fragment.MenuDialogsActions;
 import bangbang.yodasbox.Model.CharacterResultJSON;
 import bangbang.yodasbox.Model.PlanetResultJSON;
 import bangbang.yodasbox.Network.Network;
@@ -46,6 +45,9 @@ public class QuestionActivity extends Activity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
         setContentView(R.layout.question_layout);
 
         receiver = new YodaSearchResultReceiver();
@@ -117,6 +119,10 @@ public class QuestionActivity extends Activity  {
             fake2 = generateUniquePersonage();
         } while(fake2 == fake1);
         networkAccess.requestYoda("people", fake2);
+
+        System.out.println(fake1);
+        System.out.println(fake2);
+        System.out.println(listPersonages.get(listPersonages.size()-1));
     }
 
     public int generateUniquePersonage()
@@ -138,16 +144,14 @@ public class QuestionActivity extends Activity  {
 
             queuePerson++;
             if(queuePerson == 0)
-                hidePerson = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+                hidePerson = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_PEOPLE_EXTRA);
 
             if(queuePerson == 1)
-                fake1Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+                fake1Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_PEOPLE_EXTRA);
 
             if(queuePerson == 2)
             {
-                fake2Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
-                ;
-
+                fake2Person = (CharacterResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_PEOPLE_EXTRA);
 
                 if(hidePerson !=null )
                 {
@@ -182,17 +186,14 @@ public class QuestionActivity extends Activity  {
                         listChoice.get(i).setOnClickListener(winListener);
                     else
                         listChoice.get(i).setOnClickListener(loseListener);
-
                 }
             }
 
-            if(queuePerson == 3)
+            if(intent.getExtras().containsKey(Network.YODA_SEARCH_PLANET_EXTRA))
             {
-                PlanetResultJSON planet = (PlanetResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_RESULT_EXTRA);
+                PlanetResultJSON planet = (PlanetResultJSON)intent.getSerializableExtra(Network.YODA_SEARCH_PLANET_EXTRA);
                 homeworld.setText(planet.getName());
             }
-
-
 
         }
     }
@@ -215,37 +216,11 @@ public class QuestionActivity extends Activity  {
     };
 
 
-
-
     @Override
     public void onBackPressed() {
-        Toast.makeText(getApplicationContext(), "BACK BUTTON", Toast.LENGTH_SHORT).show();
-
-        DialogsActions backToMenu = new DialogsActions();
+        MenuDialogsActions backToMenu = new MenuDialogsActions();
         FragmentManager manager = getFragmentManager();
         backToMenu.show(manager, "backToMenuFrag");
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_question, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

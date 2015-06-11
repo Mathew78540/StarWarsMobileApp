@@ -15,7 +15,12 @@
     <string name="undefined">NC</string>
     <string name="continueGame">Continue</string>
 
+
+
+    <!-- Dialogs messages -->
     <string name="backMenu">Leave the game ?</string>
+    <string name="informations_popup">Blablabla</string>
+
 
 
 

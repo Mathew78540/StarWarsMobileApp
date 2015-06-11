@@ -3,7 +3,9 @@ package bangbang.yodasbox.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.lang.String;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

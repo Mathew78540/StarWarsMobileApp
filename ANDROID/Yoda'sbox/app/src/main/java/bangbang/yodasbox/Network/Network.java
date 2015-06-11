@@ -18,7 +18,8 @@ package bangbang.yodasbox.Network;
 public class Network {
 
     public static final String YODA_REQUEST_INTENT = "yodaSearchResult";
-    public static final String YODA_SEARCH_RESULT_EXTRA = "yodaExtra";
+    public static final String YODA_SEARCH_PEOPLE_EXTRA = "yodaExtraPeople";
+    public static final String YODA_SEARCH_PLANET_EXTRA = "yodaExtraPlanet";
 
     public CharacterResultJSON person;
 
@@ -33,9 +34,18 @@ public class Network {
                     public void onResponse(CharacterResultJSON characterResultsJSON) {
                         //Use or store the object UserSession
 
+                        byte[] b = characterResultsJSON.getName().getBytes();
+                        try
+                        {
+                            characterResultsJSON.setName(new String(b,"UTF-8"));
+                        }
+                        catch (Exception e)
+                        {
+                            System.out.println(e);
+                        }
 
                         Intent intent = new Intent(YODA_REQUEST_INTENT);
-                        intent.putExtra(YODA_SEARCH_RESULT_EXTRA, characterResultsJSON);
+                        intent.putExtra(YODA_SEARCH_PEOPLE_EXTRA, characterResultsJSON);
 
                         LocalBroadcastManager.getInstance(MyApp.getInstance().getApplicationContext()).sendBroadcast(intent);
 
@@ -68,7 +78,7 @@ public class Network {
 
 
                         Intent intent = new Intent(YODA_REQUEST_INTENT);
-                        intent.putExtra(YODA_SEARCH_RESULT_EXTRA, planetResultsJSON);
+                        intent.putExtra(YODA_SEARCH_PLANET_EXTRA, planetResultsJSON);
 
                         LocalBroadcastManager.getInstance(MyApp.getInstance().getApplicationContext()).sendBroadcast(intent);
 
