@@ -24,7 +24,7 @@ class PlayViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        //navigationController?.navigationBar.hidden = true; // for navigation bar hide
+        navigationController?.navigationBar.hidden = true; // for navigation bar hide
         //UIApplication.sharedApplication().statusBarHidden = true; // for status bar hide
         //navigationController?.navigationBar.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.5); // Don't work
     }
