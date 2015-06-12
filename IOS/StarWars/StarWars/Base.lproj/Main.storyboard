@@ -32,7 +32,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pqs-Wr-IUs" secondAttribute="height" multiplier="249:53" id="Sbs-p1-h1e"/>
                                 </constraints>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button.png">
+                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_2.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,7 +45,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ml5-bf-Fqm" secondAttribute="height" multiplier="249:53" id="RvI-cC-IZf"/>
                                 </constraints>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button.png">
+                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_1.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -85,7 +85,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rAZ-qQ-qLh" secondAttribute="height" multiplier="249:53" id="rat-m7-mXU"/>
                                 </constraints>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button.png">
+                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_3.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -238,7 +238,9 @@
     <resources>
         <image name="background.jpg" width="640" height="1096"/>
         <image name="background_Score.png" width="107" height="107"/>
-        <image name="background_button.png" width="498" height="106"/>
+        <image name="background_button_1.png" width="498" height="104"/>
+        <image name="background_button_2.png" width="508" height="110"/>
+        <image name="background_button_3.png" width="500" height="108"/>
         <image name="background_liste.png" width="507" height="371"/>
         <image name="background_question.png" width="580" height="233"/>
     </resources>
