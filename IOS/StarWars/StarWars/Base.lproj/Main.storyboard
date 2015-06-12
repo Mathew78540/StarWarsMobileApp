@@ -53,12 +53,6 @@
                                     <action selector="btnOneAction:" destination="BxN-N6-UCy" eventType="touchUpInside" id="DO1-hR-Jr5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_question.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iq4-pk-9u9">
-                                <rect key="frame" x="19" y="63" width="290" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Iq4-pk-9u9" secondAttribute="height" multiplier="290:117" id="fct-Qy-IgW"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_Score.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lu9-jW-GJT">
                                 <rect key="frame" x="254" y="15" width="50" height="50"/>
                                 <constraints>
@@ -100,6 +94,12 @@
                                     <action selector="btnTwoAction:" destination="BxN-N6-UCy" eventType="touchUpInside" id="ubn-oN-yoD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_question.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iq4-pk-9u9">
+                                <rect key="frame" x="19" y="63" width="290" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Iq4-pk-9u9" secondAttribute="height" multiplier="290:117" id="fct-Qy-IgW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
