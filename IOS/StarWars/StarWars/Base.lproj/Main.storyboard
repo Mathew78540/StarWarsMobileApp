@@ -18,8 +18,10 @@
             <string>OCRAStd</string>
             <string>OCRAStd</string>
             <string>OCRAStd</string>
+            <string>OCRAStd</string>
         </mutableArray>
         <mutableArray key="starjedi.ttf">
+            <string>StarJedi</string>
             <string>StarJedi</string>
             <string>StarJedi</string>
         </mutableArray>
@@ -417,23 +419,80 @@ neimoidia</string>
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-Ck-RFE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-Ck-RFE">
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="568"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="howToPlay_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y4g-6P-DUy">
+                                <rect key="frame" x="21" y="30" width="278" height="518"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-gv-DbL">
+                                <rect key="frame" x="274" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="iEX-Aj-VTq"/>
+                                    <constraint firstAttribute="height" constant="30" id="mhA-HL-rK4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMk-Cu-1FD"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24j-DW-HUm">
+                                <rect key="frame" x="72" y="45" width="176" height="37"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separation_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="KuF-DR-bdS">
+                                <rect key="frame" x="60" y="95" width="200" height="7"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dfy-ha-sMM"/>
+                                    <constraint firstAttribute="height" constant="7" id="shW-5T-ni3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-zM-Ctv">
+                                <rect key="frame" x="46" y="137" width="228" height="255"/>
+                                <string key="text">Find the right  character you must. Lorem ipsum dolor sit amet, consectetur dipisicing elit, sed do eiusmod tempor ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure reprehenderit in voluptate.</string>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fry-Zb-1YE">
+                                <rect key="frame" x="274" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="BnT-iR-CpM"/>
+                                    <constraint firstAttribute="height" constant="30" id="Eg3-rq-5v1"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="UEs-Q7-pHA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="v1r-Ck-RFE" secondAttribute="trailing" constant="-16" id="Cfg-IQ-cn7"/>
+                            <constraint firstItem="LRW-zM-Ctv" firstAttribute="top" secondItem="KuF-DR-bdS" secondAttribute="bottom" constant="35" id="AZY-7K-TqO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wRC-gv-DbL" secondAttribute="trailing" id="EWa-yL-wZO"/>
+                            <constraint firstItem="fry-Zb-1YE" firstAttribute="top" secondItem="M7V-zX-uiG" secondAttribute="bottom" id="FWH-xJ-UVz"/>
+                            <constraint firstItem="KuF-DR-bdS" firstAttribute="top" secondItem="wRC-gv-DbL" secondAttribute="bottom" constant="45" id="HdJ-Ix-m13"/>
+                            <constraint firstAttribute="centerX" secondItem="KuF-DR-bdS" secondAttribute="centerX" id="MCd-ea-YEj"/>
+                            <constraint firstItem="LRW-zM-Ctv" firstAttribute="leading" secondItem="lKH-uc-ycl" secondAttribute="leadingMargin" constant="30" id="Okv-JD-4u6"/>
+                            <constraint firstItem="wRC-gv-DbL" firstAttribute="top" secondItem="M7V-zX-uiG" secondAttribute="bottom" id="SDi-7r-cpj"/>
                             <constraint firstItem="GZc-vi-ru2" firstAttribute="top" secondItem="v1r-Ck-RFE" secondAttribute="bottom" id="UoB-pq-g0s"/>
-                            <constraint firstItem="v1r-Ck-RFE" firstAttribute="leading" secondItem="lKH-uc-ycl" secondAttribute="leadingMargin" constant="-16" id="VPD-MQ-kzO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LRW-zM-Ctv" secondAttribute="trailing" constant="30" id="V91-g4-NvQ"/>
+                            <constraint firstItem="24j-DW-HUm" firstAttribute="top" secondItem="M7V-zX-uiG" secondAttribute="bottom" constant="25" id="Ztb-DE-fbe"/>
+                            <constraint firstAttribute="centerX" secondItem="24j-DW-HUm" secondAttribute="centerX" id="aBQ-4N-3P8"/>
+                            <constraint firstItem="Y4g-6P-DUy" firstAttribute="top" secondItem="M7V-zX-uiG" secondAttribute="bottom" constant="10" id="h8S-dj-MVW"/>
                             <constraint firstItem="v1r-Ck-RFE" firstAttribute="top" secondItem="lKH-uc-ycl" secondAttribute="topMargin" id="pud-Kk-zzI"/>
+                            <constraint firstItem="Y4g-6P-DUy" firstAttribute="leading" secondItem="lKH-uc-ycl" secondAttribute="leadingMargin" constant="5" id="q1x-ZB-hhP"/>
+                            <constraint firstItem="GZc-vi-ru2" firstAttribute="top" secondItem="Y4g-6P-DUy" secondAttribute="bottom" constant="20" id="rbA-UD-NP3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y4g-6P-DUy" secondAttribute="trailing" constant="5" id="six-YU-jq1"/>
+                            <constraint firstItem="fry-Zb-1YE" firstAttribute="trailing" secondItem="lKH-uc-ycl" secondAttribute="trailingMargin" id="uC5-dV-xNa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="How Play" id="Tjx-74-w0x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-fr-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="346"/>
+            <point key="canvasLocation" x="1157" y="355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Si-CD-Uav">
@@ -464,7 +523,9 @@ neimoidia</string>
         <image name="background_button_3.png" width="500" height="108"/>
         <image name="background_liste.png" width="507" height="371"/>
         <image name="background_question.png" width="580" height="233"/>
+        <image name="close_btn.png" width="60" height="60"/>
         <image name="home_text_bg.png" width="594" height="240"/>
+        <image name="howToPlay_bg.png" width="551" height="971"/>
         <image name="icon_eye.png" width="35" height="35"/>
         <image name="icon_face.png" width="35" height="35"/>
         <image name="icon_gender.png" width="35" height="35"/>
@@ -472,6 +533,7 @@ neimoidia</string>
         <image name="icon_planet.png" width="35" height="35"/>
         <image name="icon_rule.png" width="35" height="35"/>
         <image name="info_btn.png" width="65" height="65"/>
+        <image name="separation_bar.png" width="391" height="14"/>
         <image name="start_btn.png" width="382" height="109"/>
         <image name="yoda.png" width="374" height="320"/>
     </resources>
@@ -481,6 +543,6 @@ neimoidia</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bjn-c4-0vC"/>
+        <segue reference="UEs-Q7-pHA"/>
     </inferredMetricsTieBreakers>
 </document>
