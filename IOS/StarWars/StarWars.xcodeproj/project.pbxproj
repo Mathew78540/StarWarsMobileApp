@@ -29,6 +29,10 @@
 		D93CE35B1B2ADB0200EDAED2 /* background_button_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D93CE3581B2ADB0200EDAED2 /* background_button_3.png */; };
 		D981398F1B2DD4E900BBAC5B /* ocr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D981398D1B2DD4E900BBAC5B /* ocr.ttf */; };
 		D98139941B2DE1E600BBAC5B /* starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98139931B2DE1E600BBAC5B /* starjedi.ttf */; };
+		D98139991B2E0FEA00BBAC5B /* home_text_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D98139951B2E0FEA00BBAC5B /* home_text_bg.png */; };
+		D981399A1B2E0FEA00BBAC5B /* info_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = D98139961B2E0FEA00BBAC5B /* info_btn.png */; };
+		D981399B1B2E0FEA00BBAC5B /* start_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = D98139971B2E0FEA00BBAC5B /* start_btn.png */; };
+		D981399C1B2E0FEA00BBAC5B /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = D98139981B2E0FEA00BBAC5B /* yoda.png */; };
 		D9F70F551B2C704D00E59C9E /* icon_eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F4F1B2C704D00E59C9E /* icon_eye.png */; };
 		D9F70F561B2C704D00E59C9E /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F501B2C704D00E59C9E /* icon_face.png */; };
 		D9F70F571B2C704D00E59C9E /* icon_gender.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F511B2C704D00E59C9E /* icon_gender.png */; };
@@ -78,6 +82,10 @@
 		D93CE3581B2ADB0200EDAED2 /* background_button_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button_3.png; path = Images.xcassets/background_button_3.png; sourceTree = "<group>"; };
 		D981398D1B2DD4E900BBAC5B /* ocr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ocr.ttf; path = fonts/ocr.ttf; sourceTree = "<group>"; };
 		D98139931B2DE1E600BBAC5B /* starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = starjedi.ttf; path = fonts/starjedi.ttf; sourceTree = "<group>"; };
+		D98139951B2E0FEA00BBAC5B /* home_text_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_text_bg.png; path = Images.xcassets/home_text_bg.png; sourceTree = "<group>"; };
+		D98139961B2E0FEA00BBAC5B /* info_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info_btn.png; path = Images.xcassets/info_btn.png; sourceTree = "<group>"; };
+		D98139971B2E0FEA00BBAC5B /* start_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = start_btn.png; path = Images.xcassets/start_btn.png; sourceTree = "<group>"; };
+		D98139981B2E0FEA00BBAC5B /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yoda.png; path = Images.xcassets/yoda.png; sourceTree = "<group>"; };
 		D9F70F4F1B2C704D00E59C9E /* icon_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_eye.png; path = Images.xcassets/icon_eye.png; sourceTree = "<group>"; };
 		D9F70F501B2C704D00E59C9E /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_face.png; path = Images.xcassets/icon_face.png; sourceTree = "<group>"; };
 		D9F70F511B2C704D00E59C9E /* icon_gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gender.png; path = Images.xcassets/icon_gender.png; sourceTree = "<group>"; };
@@ -208,6 +216,10 @@
 		D98139921B2DD50300BBAC5B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D98139951B2E0FEA00BBAC5B /* home_text_bg.png */,
+				D98139961B2E0FEA00BBAC5B /* info_btn.png */,
+				D98139971B2E0FEA00BBAC5B /* start_btn.png */,
+				D98139981B2E0FEA00BBAC5B /* yoda.png */,
 				D9F70F511B2C704D00E59C9E /* icon_gender.png */,
 				D9F70F521B2C704D00E59C9E /* icon_hair.png */,
 				D9F70F531B2C704D00E59C9E /* icon_planet.png */,
@@ -326,6 +338,7 @@
 				D981398F1B2DD4E900BBAC5B /* ocr.ttf in Resources */,
 				D9F70F561B2C704D00E59C9E /* icon_face.png in Resources */,
 				4E3F12E41B226E9F0054F871 /* background_button.png in Resources */,
+				D981399C1B2E0FEA00BBAC5B /* yoda.png in Resources */,
 				D9F70F571B2C704D00E59C9E /* icon_gender.png in Resources */,
 				D9F70F581B2C704D00E59C9E /* icon_hair.png in Resources */,
 				D93CE3591B2ADB0200EDAED2 /* background_button_1.png in Resources */,
@@ -334,9 +347,12 @@
 				D93CE35A1B2ADB0200EDAED2 /* background_button_2.png in Resources */,
 				4E3F12E21B226D660054F871 /* background_liste.png in Resources */,
 				4E5874C81B1871B2000A7916 /* Images.xcassets in Resources */,
+				D98139991B2E0FEA00BBAC5B /* home_text_bg.png in Resources */,
 				D9F70F5F1B2C90F400E59C9E /* close_btn.png in Resources */,
 				4E3F12E01B226B3F0054F871 /* background_question.png in Resources */,
+				D981399B1B2E0FEA00BBAC5B /* start_btn.png in Resources */,
 				D9F70F551B2C704D00E59C9E /* icon_eye.png in Resources */,
+				D981399A1B2E0FEA00BBAC5B /* info_btn.png in Resources */,
 				D9F70F591B2C704D00E59C9E /* icon_planet.png in Resources */,
 				D93CE35B1B2ADB0200EDAED2 /* background_button_3.png in Resources */,
 				D9F70F5C1B2C84D900E59C9E /* logo_text.png in Resources */,
