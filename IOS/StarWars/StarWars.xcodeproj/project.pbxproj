@@ -27,6 +27,8 @@
 		D93CE3591B2ADB0200EDAED2 /* background_button_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D93CE3561B2ADB0200EDAED2 /* background_button_1.png */; };
 		D93CE35A1B2ADB0200EDAED2 /* background_button_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D93CE3571B2ADB0200EDAED2 /* background_button_2.png */; };
 		D93CE35B1B2ADB0200EDAED2 /* background_button_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D93CE3581B2ADB0200EDAED2 /* background_button_3.png */; };
+		D981398F1B2DD4E900BBAC5B /* ocr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D981398D1B2DD4E900BBAC5B /* ocr.ttf */; };
+		D98139941B2DE1E600BBAC5B /* starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D98139931B2DE1E600BBAC5B /* starjedi.ttf */; };
 		D9F70F551B2C704D00E59C9E /* icon_eye.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F4F1B2C704D00E59C9E /* icon_eye.png */; };
 		D9F70F561B2C704D00E59C9E /* icon_face.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F501B2C704D00E59C9E /* icon_face.png */; };
 		D9F70F571B2C704D00E59C9E /* icon_gender.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F511B2C704D00E59C9E /* icon_gender.png */; };
@@ -74,6 +76,8 @@
 		D93CE3561B2ADB0200EDAED2 /* background_button_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button_1.png; path = Images.xcassets/background_button_1.png; sourceTree = "<group>"; };
 		D93CE3571B2ADB0200EDAED2 /* background_button_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button_2.png; path = Images.xcassets/background_button_2.png; sourceTree = "<group>"; };
 		D93CE3581B2ADB0200EDAED2 /* background_button_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button_3.png; path = Images.xcassets/background_button_3.png; sourceTree = "<group>"; };
+		D981398D1B2DD4E900BBAC5B /* ocr.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ocr.ttf; path = fonts/ocr.ttf; sourceTree = "<group>"; };
+		D98139931B2DE1E600BBAC5B /* starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = starjedi.ttf; path = fonts/starjedi.ttf; sourceTree = "<group>"; };
 		D9F70F4F1B2C704D00E59C9E /* icon_eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_eye.png; path = Images.xcassets/icon_eye.png; sourceTree = "<group>"; };
 		D9F70F501B2C704D00E59C9E /* icon_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_face.png; path = Images.xcassets/icon_face.png; sourceTree = "<group>"; };
 		D9F70F511B2C704D00E59C9E /* icon_gender.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gender.png; path = Images.xcassets/icon_gender.png; sourceTree = "<group>"; };
@@ -126,28 +130,13 @@
 		4E5874BD1B1871B2000A7916 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				D98139911B2DD4EF00BBAC5B /* Fonts */,
 				4E62EE3B1B1C64E30055D082 /* Api */,
 				4E5874C01B1871B2000A7916 /* AppDelegate.swift */,
 				4EA5717F1B1BC6AC007C70AE /* Views */,
 				4E5874C41B1871B2000A7916 /* Main.storyboard */,
 				4E5874C71B1871B2000A7916 /* Images.xcassets */,
-				D9F70F5D1B2C90F400E59C9E /* close_btn.png */,
-				D9F70F5B1B2C84D900E59C9E /* logo_text.png */,
-				D9F70F4F1B2C704D00E59C9E /* icon_eye.png */,
-				D9F70F501B2C704D00E59C9E /* icon_face.png */,
-				D9F70F511B2C704D00E59C9E /* icon_gender.png */,
-				D9F70F521B2C704D00E59C9E /* icon_hair.png */,
-				D9F70F531B2C704D00E59C9E /* icon_planet.png */,
-				D9F70F541B2C704D00E59C9E /* icon_rule.png */,
-				D93CE3561B2ADB0200EDAED2 /* background_button_1.png */,
-				D93CE3571B2ADB0200EDAED2 /* background_button_2.png */,
-				D93CE3581B2ADB0200EDAED2 /* background_button_3.png */,
-				4E3F12E31B226E9F0054F871 /* background_button.png */,
-				4E3F12E11B226D660054F871 /* background_liste.png */,
-				4E3F12DF1B226B3F0054F871 /* background_question.png */,
-				4E3F12DD1B226A710054F871 /* background_Score.png */,
-				4E3F12DB1B2269E90054F871 /* background.jpg */,
-				4E5874C91B1871B2000A7916 /* LaunchScreen.xib */,
+				D98139921B2DD50300BBAC5B /* Images */,
 				4E5874BE1B1871B2000A7916 /* Supporting Files */,
 				4E8AC6C01B1C9C2F00ADF588 /* Helpers.swift */,
 			);
@@ -205,6 +194,39 @@
 				26E21EC0594BDE05C5603BF1 /* Pods-StarWars.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D98139911B2DD4EF00BBAC5B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D98139931B2DE1E600BBAC5B /* starjedi.ttf */,
+				D981398D1B2DD4E900BBAC5B /* ocr.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D98139921B2DD50300BBAC5B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D9F70F511B2C704D00E59C9E /* icon_gender.png */,
+				D9F70F521B2C704D00E59C9E /* icon_hair.png */,
+				D9F70F531B2C704D00E59C9E /* icon_planet.png */,
+				D9F70F541B2C704D00E59C9E /* icon_rule.png */,
+				D93CE3561B2ADB0200EDAED2 /* background_button_1.png */,
+				D93CE3571B2ADB0200EDAED2 /* background_button_2.png */,
+				D93CE3581B2ADB0200EDAED2 /* background_button_3.png */,
+				4E3F12E31B226E9F0054F871 /* background_button.png */,
+				4E3F12E11B226D660054F871 /* background_liste.png */,
+				4E3F12DF1B226B3F0054F871 /* background_question.png */,
+				4E3F12DD1B226A710054F871 /* background_Score.png */,
+				4E3F12DB1B2269E90054F871 /* background.jpg */,
+				4E5874C91B1871B2000A7916 /* LaunchScreen.xib */,
+				D9F70F5D1B2C90F400E59C9E /* close_btn.png */,
+				D9F70F5B1B2C84D900E59C9E /* logo_text.png */,
+				D9F70F4F1B2C704D00E59C9E /* icon_eye.png */,
+				D9F70F501B2C704D00E59C9E /* icon_face.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		E1282DB5A2D3EAA90CB3CEE0 /* Frameworks */ = {
@@ -301,6 +323,7 @@
 				4E5874C61B1871B2000A7916 /* Main.storyboard in Resources */,
 				4E3F12DC1B2269E90054F871 /* background.jpg in Resources */,
 				4E5874CB1B1871B2000A7916 /* LaunchScreen.xib in Resources */,
+				D981398F1B2DD4E900BBAC5B /* ocr.ttf in Resources */,
 				D9F70F561B2C704D00E59C9E /* icon_face.png in Resources */,
 				4E3F12E41B226E9F0054F871 /* background_button.png in Resources */,
 				D9F70F571B2C704D00E59C9E /* icon_gender.png in Resources */,
@@ -317,6 +340,7 @@
 				D9F70F591B2C704D00E59C9E /* icon_planet.png in Resources */,
 				D93CE35B1B2ADB0200EDAED2 /* background_button_3.png in Resources */,
 				D9F70F5C1B2C84D900E59C9E /* logo_text.png in Resources */,
+				D98139941B2DE1E600BBAC5B /* starjedi.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

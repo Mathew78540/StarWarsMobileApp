@@ -5,6 +5,23 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ocr.ttf">
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+        </mutableArray>
+        <mutableArray key="starjedi.ttf">
+            <string>StarJedi</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--The Game-->
         <scene sceneID="mZM-kg-9bN">
@@ -38,6 +55,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pqs-Wr-IUs" secondAttribute="height" multiplier="249:53" id="Sbs-p1-h1e"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
                                 <state key="normal" title="Luke Skywalker" backgroundImage="background_button_2.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,6 +69,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ml5-bf-Fqm" secondAttribute="height" multiplier="249:53" id="RvI-cC-IZf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
                                 <state key="normal" title="Luke Skywalker" backgroundImage="background_button_1.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,9 +89,9 @@
                                 <rect key="frame" x="25" y="108" width="279" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gOA-lK-U7c"/>
-                                    <constraint firstAttribute="width" constant="279" id="sQQ-4a-YWO"/>
+                                    <constraint firstAttribute="width" constant="250" id="sQQ-4a-YWO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,6 +110,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rAZ-qQ-qLh" secondAttribute="height" multiplier="249:53" id="rat-m7-mXU"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
                                 <state key="normal" title="Luke Skywalker" backgroundImage="background_button_3.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,7 +129,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-e2-3m9">
                                 <rect key="frame" x="88" y="183" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,9 +148,9 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Rq-bvO">
                                 <rect key="frame" x="212" y="186" width="56" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="AXl-zn-Y0U"/>
+                                    <constraint firstAttribute="width" constant="80" id="AXl-zn-Y0U"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -143,7 +163,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-gD-lu3">
                                 <rect key="frame" x="88" y="217" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -156,16 +176,16 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="172" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk6-mA-KY1">
                                 <rect key="frame" x="88" y="249" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFW-aj-Jaw">
                                 <rect key="frame" x="212" y="222" width="56" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="tOH-7u-Jiz"/>
+                                    <constraint firstAttribute="width" constant="80" id="tOH-7u-Jiz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -178,33 +198,23 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qZ-LH-ZSh">
                                 <rect key="frame" x="212" y="252" width="67" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Q9m-L5-pRI"/>
+                                    <constraint firstAttribute="width" constant="80" id="Q9m-L5-pRI"/>
                                 </constraints>
-                                <string key="text">Catoneimoidia</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <string key="text">Cato
+neimoidia</string>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_text.png" translatesAutoresizingMaskIntoConstraints="NO" id="GRJ-Ce-hyd">
-                                <rect key="frame" x="16" y="15" width="182" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="iIz-lE-Ayh"/>
-                                    <constraint firstAttribute="height" constant="19" id="sgi-hG-fd6"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyY-HI-7oa">
-                                <rect key="frame" x="9" y="8" width="196" height="39"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.32156862749999998" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="7kt-f9-OzM"/>
-                                    <constraint firstAttribute="height" constant="40" id="OVt-4I-4tv"/>
-                                </constraints>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIc-3R-z1h">
+                                <rect key="frame" x="9" y="8" width="182" height="32"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="27"/>
+                                <state key="normal" title="Yoda's box">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="Yvz-WH-NoG"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="bjn-c4-0vC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -220,7 +230,6 @@
                             <constraint firstItem="kFL-wb-bof" firstAttribute="top" secondItem="cAL-JL-dhb" secondAttribute="bottom" constant="18" id="8FG-UF-fnT"/>
                             <constraint firstItem="bl2-Sa-rWb" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="40" id="A8R-Ti-O1E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pqs-Wr-IUs" secondAttribute="trailing" constant="19" id="ApS-UV-X3X"/>
-                            <constraint firstItem="GRJ-Ce-hyd" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" constant="25" id="CRb-qU-eGI"/>
                             <constraint firstItem="yVu-yB-nZQ" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="40" id="DOM-9n-5TZ"/>
                             <constraint firstItem="Iq4-pk-9u9" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="5" id="DS0-Ox-WJO"/>
                             <constraint firstItem="lk6-mA-KY1" firstAttribute="leading" secondItem="vLQ-aO-qY8" secondAttribute="trailing" constant="13" id="Ezk-Rv-Jh8"/>
@@ -230,14 +239,15 @@
                             <constraint firstItem="7bp-LL-iGM" firstAttribute="width" secondItem="7bp-LL-iGM" secondAttribute="height" multiplier="1:1" id="I3v-7J-oxS"/>
                             <constraint firstItem="rAZ-qQ-qLh" firstAttribute="top" secondItem="pqs-Wr-IUs" secondAttribute="bottom" constant="13" id="JBQ-sN-5a2"/>
                             <constraint firstItem="Iq4-pk-9u9" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" constant="63" id="LL4-T7-ED9"/>
+                            <constraint firstItem="IIc-3R-z1h" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="5" id="LbC-Gv-x6T"/>
                             <constraint firstItem="cAL-JL-dhb" firstAttribute="top" secondItem="7bp-LL-iGM" secondAttribute="bottom" constant="18" id="LtP-cQ-1f0"/>
                             <constraint firstItem="3Zb-XA-HGT" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="15" id="NOl-R4-lnd"/>
+                            <constraint firstItem="IIc-3R-z1h" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" constant="7" id="NSm-7J-rbC"/>
                             <constraint firstAttribute="centerX" secondItem="3Zb-XA-HGT" secondAttribute="centerX" id="NYJ-zS-FG3"/>
                             <constraint firstItem="cAL-JL-dhb" firstAttribute="width" secondItem="cAL-JL-dhb" secondAttribute="height" multiplier="1:1" id="O7q-IW-aLg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Iq4-pk-9u9" secondAttribute="trailing" constant="4" id="Ob0-6g-DJc"/>
                             <constraint firstItem="5qZ-LH-ZSh" firstAttribute="leading" secondItem="kFL-wb-bof" secondAttribute="trailing" constant="13" id="Okz-IN-pS8"/>
                             <constraint firstItem="vLQ-aO-qY8" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="40" id="Pk1-RL-ICy"/>
-                            <constraint firstItem="CyY-HI-7oa" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" id="Q8C-iV-W1c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ml5-bf-Fqm" secondAttribute="trailing" constant="20" id="Sqe-OA-WcL"/>
                             <constraint firstItem="pqs-Wr-IUs" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="20" id="SxX-RO-AIh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5qZ-LH-ZSh" secondAttribute="trailing" constant="40" id="T3e-d0-TWS"/>
@@ -245,7 +255,7 @@
                             <constraint firstItem="kFL-wb-bof" firstAttribute="width" secondItem="kFL-wb-bof" secondAttribute="height" multiplier="1:1" id="XQA-3b-IOb"/>
                             <constraint firstItem="Ml5-bf-Fqm" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="20" id="YTY-0A-BIM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Zb-XA-HGT" secondAttribute="trailing" constant="15" id="Zdt-ju-YDi"/>
-                            <constraint firstItem="5qZ-LH-ZSh" firstAttribute="top" secondItem="dFW-aj-Jaw" secondAttribute="bottom" constant="18" id="c1W-wD-ZNN"/>
+                            <constraint firstItem="5qZ-LH-ZSh" firstAttribute="top" secondItem="dFW-aj-Jaw" secondAttribute="bottom" constant="25" id="c1W-wD-ZNN"/>
                             <constraint firstItem="d0Z-Rq-bvO" firstAttribute="leading" secondItem="7bp-LL-iGM" secondAttribute="trailing" constant="13" id="cPR-fi-Gy4"/>
                             <constraint firstItem="r9K-df-kcv" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" id="dB0-fH-oGZ"/>
                             <constraint firstItem="gOp-bs-igr" firstAttribute="top" secondItem="r9K-df-kcv" secondAttribute="bottom" id="h9i-hV-blZ"/>
@@ -253,16 +263,14 @@
                             <constraint firstItem="Lu9-jW-GJT" firstAttribute="trailing" secondItem="1J0-uo-VbF" secondAttribute="trailingMargin" id="hqd-Ej-jjs"/>
                             <constraint firstItem="dFW-aj-Jaw" firstAttribute="leading" secondItem="cAL-JL-dhb" secondAttribute="trailing" constant="13" id="i7O-0w-cMb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d0Z-Rq-bvO" secondAttribute="trailing" constant="40" id="jVx-Am-V7a"/>
-                            <constraint firstItem="CyY-HI-7oa" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" constant="8" id="m0C-xu-L72"/>
-                            <constraint firstItem="GRJ-Ce-hyd" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" id="mtR-MS-7Xs"/>
-                            <constraint firstItem="lk6-mA-KY1" firstAttribute="top" secondItem="wp6-gD-lu3" secondAttribute="bottom" constant="18" id="rdY-BX-dSo"/>
+                            <constraint firstItem="lk6-mA-KY1" firstAttribute="top" secondItem="wp6-gD-lu3" secondAttribute="bottom" constant="26" id="rdY-BX-dSo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rAZ-qQ-qLh" secondAttribute="trailing" constant="20" id="s5c-yK-PZf"/>
-                            <constraint firstItem="wp6-gD-lu3" firstAttribute="top" secondItem="HYP-e2-3m9" secondAttribute="bottom" constant="18" id="sJc-zP-Wef"/>
+                            <constraint firstItem="wp6-gD-lu3" firstAttribute="top" secondItem="HYP-e2-3m9" secondAttribute="bottom" constant="26" id="sJc-zP-Wef"/>
                             <constraint firstItem="bl2-Sa-rWb" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="9" id="sLY-UP-V6S"/>
-                            <constraint firstItem="dFW-aj-Jaw" firstAttribute="top" secondItem="d0Z-Rq-bvO" secondAttribute="bottom" constant="18" id="tLE-Jp-2U6"/>
-                            <constraint firstItem="d0Z-Rq-bvO" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="12" id="vaF-wg-WTj"/>
+                            <constraint firstItem="dFW-aj-Jaw" firstAttribute="top" secondItem="d0Z-Rq-bvO" secondAttribute="bottom" constant="25" id="tLE-Jp-2U6"/>
+                            <constraint firstItem="d0Z-Rq-bvO" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="14" id="vaF-wg-WTj"/>
                             <constraint firstItem="7bp-LL-iGM" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="9" id="vgD-yD-ag8"/>
-                            <constraint firstItem="HYP-e2-3m9" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="12" id="voC-lI-YoL"/>
+                            <constraint firstItem="HYP-e2-3m9" firstAttribute="top" secondItem="Iq4-pk-9u9" secondAttribute="bottom" constant="14" id="voC-lI-YoL"/>
                             <constraint firstItem="Ml5-bf-Fqm" firstAttribute="top" secondItem="3Zb-XA-HGT" secondAttribute="bottom" constant="25" id="vv2-WW-utj"/>
                             <constraint firstItem="yVu-yB-nZQ" firstAttribute="top" secondItem="bl2-Sa-rWb" secondAttribute="bottom" constant="18" id="wfc-cR-uWr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r9K-df-kcv" secondAttribute="trailing" constant="-16" id="wyQ-qT-cBd"/>
@@ -280,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHv-fL-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="813"/>
+            <point key="canvasLocation" x="147" y="822"/>
         </scene>
         <!--Yoda's Box-->
         <scene sceneID="ufC-wZ-h7g">
@@ -345,8 +353,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-Ck-RFE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="v1r-Ck-RFE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,7 +406,6 @@
         <image name="icon_hair.png" width="35" height="35"/>
         <image name="icon_planet.png" width="35" height="35"/>
         <image name="icon_rule.png" width="35" height="35"/>
-        <image name="logo_text.png" width="369" height="35"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -406,6 +413,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Yvz-WH-NoG"/>
+        <segue reference="bjn-c4-0vC"/>
     </inferredMetricsTieBreakers>
 </document>
