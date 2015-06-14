@@ -10,7 +10,8 @@ import java.util.ArrayList;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class CharacterResultJSON implements Serializable {
+public class CharacterResultJSON implements Serializable
+{
     private String name, height, hair_color, skin_color, eye_color, gender, homeworld;
 
     public CharacterResultJSON()

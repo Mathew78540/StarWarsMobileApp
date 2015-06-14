@@ -4,11 +4,22 @@
     android:layout_height="match_parent">
 
 
+    <ImageView
+        android:id="@+id/pictureResponse"
+        android:layout_width="150dip"
+        android:layout_height="150dip" />
+
     <TextView
+        android:text="@string/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/test"
-        android:text="@string/undefined"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/nameResponse"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
 

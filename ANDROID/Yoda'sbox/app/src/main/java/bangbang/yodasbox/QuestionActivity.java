@@ -38,7 +38,7 @@ public class QuestionActivity extends Activity  {
     private ArrayList<Integer> listPersonages;
     private CharacterResultJSON hidePerson, fake1Person, fake2Person;
 
-    private TextView gender, eye_color, skin_color, hair_color, height, homeworld;
+    private TextView levelView, gender, eye_color, skin_color, hair_color, height, homeworld;
     private ArrayList<Button> listChoice;
 
 
@@ -47,16 +47,24 @@ public class QuestionActivity extends Activity  {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getActionBar();
         actionBar.hide();
-
         setContentView(R.layout.question_layout);
 
+        // set receiver for API's call
         receiver = new YodaSearchResultReceiver();
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter(Network.YODA_REQUEST_INTENT));
 
+        getExtras();
 
+        random = new Random();
+        initViews();
+        initPersonages();
+
+    }
+
+    public void getExtras()
+    {
         // Get extra or init vars
         Bundle extras = getIntent().getExtras();
-
 
         if(extras!=null && extras.getString("level") != null)
             level = Integer.parseInt(extras.getString("level"))+1;
@@ -71,20 +79,13 @@ public class QuestionActivity extends Activity  {
             for (int i = 0; i < listPersonagesStrings.length; i++)
                 listPersonages.add(Integer.parseInt(listPersonagesStrings[i].replace("[","").replace("]","").trim()));
         }
-
-        System.out.println("level: " + level);
-        System.out.println("Personages passed: " + listPersonages.toString());
-
-
-
-        random = new Random();
-        initViews();
-        initPersonages();
-
     }
 
     public void initViews()
     {
+        levelView = (TextView)findViewById(R.id.level);
+        levelView.setText(Integer.toString(level));
+
         gender = (TextView)findViewById(R.id.gender);
         eye_color = (TextView)findViewById(R.id.eye_color);
         skin_color = (TextView)findViewById(R.id.skin_color);
@@ -164,8 +165,10 @@ public class QuestionActivity extends Activity  {
                     hair_color.setText(hidePerson.getHair_color());
                     height.setText(hidePerson.getHeight());
 
-                    // get planet's name in API
+                    // get planet's name in API && image by Google Image
                     networkAccess.requestYodaPlanet(hidePerson.getHomeworld());
+                    networkAccess.requestYodaImage("starWars");
+
                 }
 
                 // instanciate first fake person
