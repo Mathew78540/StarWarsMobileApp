@@ -325,33 +325,20 @@ neimoidia</string>
                                 <rect key="frame" x="0.0" y="0.0" width="640" height="1096"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoda's box" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOf-NX-WIB">
-                                <rect key="frame" x="72" y="50" width="176" height="42"/>
-                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="26"/>
+                                <rect key="frame" x="52" y="65" width="217" height="52"/>
+                                <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoda.png" translatesAutoresizingMaskIntoConstraints="NO" id="GdN-uv-XMP">
-                                <rect key="frame" x="30" y="117" width="260" height="222"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GdN-uv-XMP" secondAttribute="height" multiplier="130:111" id="uJp-3w-7V1"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="oc2-Rh-ck6">
-                                <rect key="frame" x="264" y="10" width="40" height="40"/>
+                                <rect key="frame" x="264" y="25" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CaZ-L6-JBF"/>
                                     <constraint firstAttribute="height" constant="40" id="GAC-Sv-ecH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_text_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="e81-Bp-hgC">
-                                <rect key="frame" x="10" y="359" width="300" height="121"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="E1n-Se-UmW"/>
-                                    <constraint firstAttribute="height" constant="121" id="yLZ-Jp-YLL"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-g2-YSV">
-                                <rect key="frame" x="264" y="10" width="40" height="40"/>
+                                <rect key="frame" x="264" y="25" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Hou-r3-mm5"/>
                                     <constraint firstAttribute="width" constant="40" id="qK8-ar-j4h"/>
@@ -372,7 +359,7 @@ neimoidia</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9o-uz-mqA">
-                                <rect key="frame" x="60" y="491" width="200" height="57"/>
+                                <rect key="frame" x="60" y="481" width="200" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="E2M-yB-ucn"/>
                                     <constraint firstAttribute="height" constant="57" id="kz1-CF-bg0"/>
@@ -385,8 +372,14 @@ neimoidia</string>
                                     <segue destination="BxN-N6-UCy" kind="push" id="qAg-OW-HSW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoda_galactique.png" translatesAutoresizingMaskIntoConstraints="NO" id="GdN-uv-XMP">
+                                <rect key="frame" x="16" y="112" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GdN-uv-XMP" secondAttribute="height" multiplier="1:1" id="a8f-xF-uJo"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the right  character you must." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sJ-oH-lOx">
-                                <rect key="frame" x="20" y="412" width="280" height="34"/>
+                                <rect key="frame" x="20" y="415" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="p2N-g0-qKu"/>
                                 </constraints>
@@ -400,20 +393,18 @@ neimoidia</string>
                             <constraint firstAttribute="centerX" secondItem="qOf-NX-WIB" secondAttribute="centerX" id="1Xa-go-Wcj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oc2-Rh-ck6" secondAttribute="trailing" id="7Dj-Cl-K0y"/>
                             <constraint firstAttribute="centerX" secondItem="3G9-Zz-bFJ" secondAttribute="centerX" id="7o9-Fp-NlA"/>
-                            <constraint firstItem="qOf-NX-WIB" firstAttribute="top" secondItem="gVa-N4-9YA" secondAttribute="bottom" constant="30" id="8PA-fv-LYF"/>
-                            <constraint firstItem="GdN-uv-XMP" firstAttribute="top" secondItem="qOf-NX-WIB" secondAttribute="bottom" constant="25" id="FPh-Uu-q7T"/>
-                            <constraint firstAttribute="centerX" secondItem="GdN-uv-XMP" secondAttribute="centerX" id="Ky7-rn-9gD"/>
-                            <constraint firstItem="e81-Bp-hgC" firstAttribute="top" secondItem="GdN-uv-XMP" secondAttribute="bottom" constant="20" id="TBc-2n-epb"/>
-                            <constraint firstItem="6sJ-oH-lOx" firstAttribute="top" secondItem="GdN-uv-XMP" secondAttribute="bottom" constant="73" id="cOa-iI-76N"/>
-                            <constraint firstItem="GdN-uv-XMP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="eJS-Ds-ftd"/>
-                            <constraint firstItem="c7a-g2-YSV" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="10" id="fqJ-d3-COn"/>
+                            <constraint firstItem="qOf-NX-WIB" firstAttribute="top" secondItem="gVa-N4-9YA" secondAttribute="bottom" constant="45" id="8PA-fv-LYF"/>
+                            <constraint firstItem="GdN-uv-XMP" firstAttribute="top" secondItem="qOf-NX-WIB" secondAttribute="bottom" constant="-5" id="FPh-Uu-q7T"/>
+                            <constraint firstItem="GdN-uv-XMP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="RNh-Ue-sxf"/>
+                            <constraint firstItem="GdN-uv-XMP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eJS-Ds-ftd"/>
+                            <constraint firstItem="c7a-g2-YSV" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="25" id="fqJ-d3-COn"/>
                             <constraint firstItem="c7a-g2-YSV" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="hFn-Wo-GoK"/>
                             <constraint firstAttribute="centerX" secondItem="A9o-uz-mqA" secondAttribute="centerX" id="jTV-DE-O9F"/>
                             <constraint firstItem="04i-nH-z3e" firstAttribute="top" secondItem="3G9-Zz-bFJ" secondAttribute="bottom" constant="20" id="mRZ-6x-m6I"/>
                             <constraint firstAttribute="centerX" secondItem="6sJ-oH-lOx" secondAttribute="centerX" id="mz7-XD-Amr"/>
-                            <constraint firstAttribute="centerX" secondItem="e81-Bp-hgC" secondAttribute="centerX" id="p89-Yi-LwI"/>
-                            <constraint firstItem="oc2-Rh-ck6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="10" id="rV5-Nv-G6K"/>
-                            <constraint firstItem="04i-nH-z3e" firstAttribute="top" secondItem="A9o-uz-mqA" secondAttribute="bottom" constant="20" id="wVX-PF-LyP"/>
+                            <constraint firstItem="oc2-Rh-ck6" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="25" id="rV5-Nv-G6K"/>
+                            <constraint firstItem="6sJ-oH-lOx" firstAttribute="top" secondItem="GdN-uv-XMP" secondAttribute="bottom" constant="15" id="rhN-nQ-Xvz"/>
+                            <constraint firstItem="04i-nH-z3e" firstAttribute="top" secondItem="A9o-uz-mqA" secondAttribute="bottom" constant="30" id="wVX-PF-LyP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yoda's Box" id="wmf-lg-hbb"/>
@@ -927,7 +918,6 @@ neimoidia</string>
         <image name="background_question.png" width="580" height="233"/>
         <image name="close_btn.png" width="60" height="60"/>
         <image name="google_image_api_sample.png" width="495" height="500"/>
-        <image name="home_text_bg.png" width="594" height="240"/>
         <image name="howToPlay_bg.png" width="551" height="971"/>
         <image name="icon_eye.png" width="35" height="35"/>
         <image name="icon_face.png" width="35" height="35"/>
@@ -938,7 +928,7 @@ neimoidia</string>
         <image name="info_btn.png" width="65" height="65"/>
         <image name="separation_bar.png" width="391" height="14"/>
         <image name="start_btn.png" width="382" height="109"/>
-        <image name="yoda.png" width="374" height="320"/>
+        <image name="yoda_galactique.png" width="639" height="636"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -946,6 +936,6 @@ neimoidia</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="N4k-h8-1cU"/>
+        <segue reference="UEs-Q7-pHA"/>
     </inferredMetricsTieBreakers>
 </document>
