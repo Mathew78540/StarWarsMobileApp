@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -18,7 +19,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,7 +32,7 @@ import bangbang.yodasbox.Network.Network;
 public class ResultatQuestionActivity extends Activity {
 
     private String level, namePersonage, listPersonages;
-    private TextView textWin;
+    private TextView textWin, levelView, titleView;
     private ImageView imagePersonage;
     private YodaSearchResultReceiver receiver;
     private Network network;
@@ -45,20 +45,29 @@ public class ResultatQuestionActivity extends Activity {
         actionBar.hide();
         setContentView(R.layout.resultat_layout);
 
+
+        // Set font for title
+        titleView = (TextView)findViewById(R.id.app_name);
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "fonts/starjedi.ttf");
+        titleView.setTypeface(face);
+
         // Init views
+        levelView = (TextView)findViewById(R.id.level);
         textWin = (TextView)findViewById(R.id.nameResponse);
         imagePersonage = (ImageView)findViewById(R.id.pictureResponse);
         Button playButton = (Button)findViewById(R.id.continueGame);
 
         getExtras();
 
+        levelView.setText(level);
+
         receiver = new YodaSearchResultReceiver();
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter(Network.YODA_REQUEST_INTENT));
 
         network = new Network();
         try {
-            //network.requestYodaImage(URLEncoder.encode(namePersonage +" StarWars", "UTF-8"));
-            network.requestYodaImage(URLEncoder.encode(namePersonage, "UTF-8"));
+            network.requestYodaImage(URLEncoder.encode(namePersonage +" StarWars", "UTF-8"));
         }
         catch(Exception e)
         {

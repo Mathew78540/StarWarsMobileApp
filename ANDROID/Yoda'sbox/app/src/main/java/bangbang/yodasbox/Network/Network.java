@@ -134,7 +134,7 @@ public class Network {
         protected String doInBackground(String... urls)
         {
             InputStream inputStream = null;
-            String url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+urls[0];
+            String url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&imgsz=medium&as_filetype=jpg&q="+urls[0];
             String result = "";
             try {
                 HttpClient httpclient = new DefaultHttpClient();

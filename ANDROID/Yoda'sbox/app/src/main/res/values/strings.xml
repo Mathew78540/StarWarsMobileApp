@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Yoda\'s box</string>
+    <string name="app_name"><b>yoda\'s box</b></string>
 
     <string name="settings">Settings</string>
 
@@ -13,7 +13,8 @@
 
 
     <string name="undefined">NC</string>
-    <string name="continueGame">Continue</string>
+    <string name="result">The good answer you found</string>
+    <string name="continueGame">Next question</string>
 
 
 

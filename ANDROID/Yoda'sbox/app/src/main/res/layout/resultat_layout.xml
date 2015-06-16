@@ -1,33 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/background">
 
-
-    <ImageView
-        android:id="@+id/pictureResponse"
-        android:layout_width="150dip"
-        android:layout_height="150dip" />
-
-    <TextView
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="350dip"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
-    <TextView
-        android:id="@+id/nameResponse"
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center_horizontal" >
 
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/continueGame"
-        android:layout_gravity="center"
-        android:id="@+id/continueGame" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip">
+
+            <TextView
+                android:text="@string/app_name"
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dip"
+                android:textSize="29dip"
+                />
+
+            <TextView
+                android:text="@string/undefined"
+                android:id="@+id/level"
+                android:layout_width="63dip"
+                android:layout_height="63dip"
+                android:layout_alignParentRight="true"
+                android:textSize="30dip"
+                android:gravity="center"
+                android:background="@drawable/background_score"/>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="430dip"
+            android:layout_marginTop="6dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dip"
+                android:orientation="vertical"
+                android:background="@drawable/background_response"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/result_text"
+                    android:text="@string/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dip"
+                    android:textSize="17dip"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/nameResponse"
+                    android:text="@string/undefined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:textSize="19dip"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="317dip"
+                android:layout_height="324dip"
+                android:background="@drawable/background_image"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/pictureResponse"
+                android:layout_width="265dip"
+                android:layout_height="265dip"
+                android:layout_marginTop="27dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="294dip"
+            android:text="@string/continueGame"
+            android:layout_gravity="center"
+            android:id="@+id/continueGame"
+            android:background="@drawable/background_button_1"/>
+
+    </LinearLayout>
 
 </LinearLayout>

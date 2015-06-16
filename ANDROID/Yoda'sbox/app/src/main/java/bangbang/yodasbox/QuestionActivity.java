@@ -131,7 +131,7 @@ public class QuestionActivity extends Activity  {
         int randomInt;
         do {
             randomInt = random.nextInt(85)+1;
-        } while(listPersonages.contains(randomInt));
+        } while(listPersonages.contains(randomInt) || randomInt==17);
 
         return randomInt;
     }
@@ -167,8 +167,6 @@ public class QuestionActivity extends Activity  {
 
                     // get planet's name in API && image by Google Image
                     networkAccess.requestYodaPlanet(hidePerson.getHomeworld());
-                    networkAccess.requestYodaImage("starWars");
-
                 }
 
                 // instanciate first fake person

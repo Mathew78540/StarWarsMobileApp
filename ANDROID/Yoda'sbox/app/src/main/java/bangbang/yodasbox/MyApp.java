@@ -2,10 +2,13 @@ package bangbang.yodasbox;
 
 
 import android.app.Application;
+import android.graphics.Typeface;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+
+import java.lang.reflect.Field;
 
 import bangbang.yodasbox.Network.LruBitmapCache;
 
@@ -21,9 +24,22 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
+        // Change default font
+        Typeface defaultFace = Typeface.createFromAsset(getApplicationContext().getAssets(), "fonts/ocr.ttf");
+        try {
+            final Field staticField = Typeface.class
+                    .getDeclaredField("SERIF");
+            staticField.setAccessible(true);
+            staticField.set(null, defaultFace);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
         MyApp.sharedInstance = this;
 
-        //Creation de la queue
+        // Creation queue Volley
         mVolleyRequestQueue = Volley.newRequestQueue(getApplicationContext());
         mVolleyImageLoader = new ImageLoader(mVolleyRequestQueue, new LruBitmapCache(1024 * 1024 * 1));
 
