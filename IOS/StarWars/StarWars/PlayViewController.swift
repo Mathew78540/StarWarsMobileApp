@@ -82,12 +82,10 @@ class PlayViewController: UIViewController {
         Quizz.randomPeople {
             (peopleInfo) in
             
-            println(peopleInfo);
-            
             self.displayClues(peopleInfo);
         
-            self.name    = peopleInfo["name"]!;
-            self.picture = peopleInfo["picture"]!;
+            self.name    = peopleInfo["name"]!; // Add the value on the scope (Use for segue)
+            self.picture = peopleInfo["picture"]!; // Add the value on the scope (Use for segue)
             
             Quizz.randomAnswer {
                 (name_1) in
@@ -148,28 +146,28 @@ class PlayViewController: UIViewController {
     func displayAnswers(gAnswers:[String:String], name1:String, name2:String){
         
         
-        var goodAnswerNumber:UInt32 = arc4random_uniform(3);
+        var goodAnswerNumber:UInt32  = arc4random_uniform(3);
         self.currentGoodAnswerNumber = Int(goodAnswerNumber);
         
         println("The good Answers is on the position : \(goodAnswerNumber)");
         
         if(Int(goodAnswerNumber) == 0){
             
-            self.btnOne.setTitle(gAnswers["name"], forState: UIControlState.Normal);
+            self.btnOne.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
             self.btnTwo.setTitle(name1, forState: UIControlState.Normal);
             self.btnThree.setTitle(name2, forState: UIControlState.Normal);
             
         } else if (Int(goodAnswerNumber) == 1){
             
             self.btnOne.setTitle(name1, forState: UIControlState.Normal);
-            self.btnTwo.setTitle(gAnswers["name"], forState: UIControlState.Normal);
+            self.btnTwo.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
             self.btnThree.setTitle(name2, forState: UIControlState.Normal);
             
         } else if(Int(goodAnswerNumber) == 2) {
             
             self.btnOne.setTitle(name2, forState: UIControlState.Normal);
             self.btnTwo.setTitle(name1, forState: UIControlState.Normal);
-            self.btnThree.setTitle(gAnswers["name"], forState: UIControlState.Normal);
+            self.btnThree.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
             
         } else {
             // ERROR

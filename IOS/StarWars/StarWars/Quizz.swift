@@ -32,7 +32,6 @@ struct Quizz {
             peopleInfo["name"]          = people["results"][Int(randomPeople)]["name"].stringValue;
             peopleInfo["eye_color"]     = people["results"][Int(randomPeople)]["eye_color"].stringValue;
             peopleInfo["height"]        = people["results"][Int(randomPeople)]["height"].stringValue;
-            peopleInfo["mass"]          = people["results"][Int(randomPeople)]["mass"].stringValue;
             peopleInfo["skin_color"]    = people["results"][Int(randomPeople)]["skin_color"].stringValue;
             peopleInfo["gender"]        = people["results"][Int(randomPeople)]["gender"].stringValue;
             peopleInfo["hair_color"]    = people["results"][Int(randomPeople)]["hair_color"].stringValue;
