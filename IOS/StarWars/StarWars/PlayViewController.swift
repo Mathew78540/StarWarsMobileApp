@@ -107,7 +107,8 @@ class PlayViewController: UIViewController {
         
         if(id == self.currentGoodAnswerNumber){
             self.score++;
-            self.nextQuestion();
+            self.performSegueWithIdentifier("answerView", sender: nil);
+            //self.nextQuestion();
         } else {
             // TODO
         }

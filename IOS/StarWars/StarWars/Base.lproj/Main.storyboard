@@ -194,7 +194,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="bjn-c4-0vC"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="back" id="bjn-c4-0vC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-Wr-IUs">
@@ -307,6 +307,7 @@
                         <outlet property="cluePlanet" destination="5qZ-LH-ZSh" id="ucR-lA-NrE"/>
                         <outlet property="clueSize" destination="lk6-mA-KY1" id="0PM-Lp-Aag"/>
                         <outlet property="scoreDisplay" destination="4nn-Oh-AHg" id="r9y-o0-Jq5"/>
+                        <segue destination="haO-TA-wzl" kind="push" identifier="answerView" id="Nev-XX-E77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHv-fL-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -621,6 +622,7 @@
                             <constraint firstItem="pji-qv-RCN" firstAttribute="top" secondItem="EEk-Qj-XX4" secondAttribute="bottom" constant="10" id="zB8-yZ-gTJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Iax-pm-x2H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llS-XM-9h4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -944,6 +946,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="N4k-h8-1cU"/>
+        <segue reference="bjn-c4-0vC"/>
     </inferredMetricsTieBreakers>
 </document>
