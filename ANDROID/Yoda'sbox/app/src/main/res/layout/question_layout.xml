@@ -1,112 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
+    android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/background"
     android:textColor = "@android:color/white">
 
-    <TextView
-        android:id="@+id/titleQuestionActivity"
-        android:text="@string/undefined"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="350dip"
         android:layout_height="wrap_content"
-        />
+        android:layout_gravity="center_horizontal" >
 
-    <TextView
-        android:id="@+id/level"
-        android:text="@string/undefined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip">
 
+            <TextView
+                android:text="@string/app_name"
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dip"
+                android:textSize="29dip"
+                />
 
-        <LinearLayout
+            <TextView
+                android:text="@string/undefined"
+                android:id="@+id/level"
+                android:layout_width="63dip"
+                android:layout_height="63dip"
+                android:layout_alignParentRight="true"
+                android:textSize="30dip"
+                android:paddingTop="5dip"
+                android:gravity="center"
+                android:background="@drawable/background_score"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:orientation="horizontal"
+            android:layout_width="350dip"
+            android:layout_height="280dip"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="300dip"
+                android:layout_height="180dip"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="25dip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/background_liste"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dip">
+
+                    <ImageView
+                        android:id="@+id/gender_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_gender" />
+
+                    <TextView
+                        android:id="@+id/gender"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/hair_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_hair" />
+
+                    <TextView
+                        android:id="@+id/hair_color"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_gravity="center"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/eye_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_eye" />
+
+                    <TextView
+                        android:id="@+id/eye_color"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/skin_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_face" />
+
+                    <TextView
+                        android:id="@+id/skin_color"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="20dip"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/height_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_rule" />
+
+                    <TextView
+                        android:id="@+id/height"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/planet_image"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/icon_planet" />
+
+                    <TextView
+                        android:id="@+id/homeworld"
+                        android:text="@string/undefined"
+                        android:layout_width="130dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="350dip"
+                android:layout_height="140dip"
+                android:layout_gravity="center"
+                android:background="@drawable/background_question">
+
+                <TextView
+                    android:id="@+id/titleQuestion"
+                    android:text="@string/question"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/firstChoice"
+            android:text="@string/undefined"
+            android:layout_height="60dip"
             android:layout_width="300dip"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" >
+            android:paddingTop="5dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/background_button_1"/>
 
-            <TextView
-                android:id="@+id/gender"
-                android:text="@string/undefined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/hair_color"
-                android:text="@string/undefined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center" >
-
-            <TextView
-                android:id="@+id/eye_color"
-                android:text="@string/undefined"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/skin_color"
-                android:text="@string/undefined"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center" >
-
-            <TextView
-                android:id="@+id/height"
-                android:text="@string/undefined"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/homeworld"
-                android:text="@string/undefined"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/secondChoice"
+            android:text="@string/undefined"
+            android:layout_height="60dip"
+            android:layout_width="300dip"
+            android:paddingTop="5dip"
+            android:layout_gravity="center"
+            android:background="@drawable/background_button_2"/>
 
 
+        <Button
+            android:id="@+id/thirdChoice"
+            android:text="@string/undefined"
+            android:layout_height="60dip"
+            android:layout_width="300dip"
+            android:paddingTop="5dip"
+            android:layout_gravity="center"
+            android:background="@drawable/background_button_3"/>
 
-    <Button
-        android:id="@+id/firstChoice"
-        android:text="@string/undefined"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center" />
-
-    <Button
-        android:id="@+id/secondChoice"
-        android:text="@string/undefined"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center" />
-
-
-    <Button
-        android:id="@+id/thirdChoice"
-        android:text="@string/undefined"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
- />
+    </LinearLayout>
 
 </LinearLayout>

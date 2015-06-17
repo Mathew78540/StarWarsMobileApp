@@ -13,6 +13,7 @@
 
 
     <string name="undefined">NC</string>
+    <string name="question">Cherche et ce personnage tu trouveras</string>
     <string name="result">The good answer you found</string>
     <string name="continueGame">Next question</string>
 
