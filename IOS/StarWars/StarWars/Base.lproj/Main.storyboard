@@ -45,7 +45,7 @@
         <!--The Game-->
         <scene sceneID="mZM-kg-9bN">
             <objects>
-                <viewController id="BxN-N6-UCy" customClass="PlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BxN-N6-UCy" customClass="PlayViewController" customModule="Yoda_s_Box" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r0E-3h-oZs"/>
                         <viewControllerLayoutGuide type="bottom" id="gOp-bs-igr"/>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="width" secondItem="rAZ-qQ-qLh" secondAttribute="height" multiplier="249:53" id="rat-m7-mXU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_3.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_3.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -118,7 +118,7 @@
                                     <constraint firstAttribute="width" constant="20" id="upe-lL-I5a"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-e2-3m9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYP-e2-3m9">
                                 <rect key="frame" x="89" y="210" width="52" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,7 +136,7 @@
                                     <constraint firstAttribute="width" constant="20" id="t9g-5p-BKa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Rq-bvO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Rq-bvO">
                                 <rect key="frame" x="184" y="210" width="80" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="AXl-zn-Y0U"/>
@@ -152,7 +152,7 @@
                                     <constraint firstAttribute="width" constant="20" id="cHL-rz-115"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-gD-lu3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wp6-gD-lu3">
                                 <rect key="frame" x="89" y="248" width="35" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,13 +165,13 @@
                                     <constraint firstAttribute="width" constant="20" id="YEf-Yd-OK8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="172" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk6-mA-KY1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk6-mA-KY1">
                                 <rect key="frame" x="89" y="286" width="26" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFW-aj-Jaw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFW-aj-Jaw">
                                 <rect key="frame" x="184" y="247" width="80" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="tOH-7u-Jiz"/>
@@ -186,13 +186,11 @@
                                     <constraint firstAttribute="width" constant="20" id="wbd-iy-xza"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qZ-LH-ZSh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qZ-LH-ZSh">
                                 <rect key="frame" x="184" y="284" width="80" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Q9m-L5-pRI"/>
                                 </constraints>
-                                <string key="text">Cato
-neimoidia</string>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -214,7 +212,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="pqs-Wr-IUs" secondAttribute="height" multiplier="249:53" id="Sbs-p1-h1e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_2.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_2.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -228,7 +226,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="Ml5-bf-Fqm" secondAttribute="height" multiplier="249:53" id="RvI-cC-IZf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_1.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_1.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -312,7 +310,7 @@ neimoidia</string>
         <!--Yoda's Box-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Yoda_s_Box" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gVa-N4-9YA"/>
                         <viewControllerLayoutGuide type="bottom" id="04i-nH-z3e"/>
@@ -416,7 +414,7 @@ neimoidia</string>
         <!--How Play-->
         <scene sceneID="M5k-Qk-ZMX">
             <objects>
-                <viewController id="rRb-uC-9rQ" customClass="HowPlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rRb-uC-9rQ" customClass="HowPlayViewController" customModule="Yoda_s_Box" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M7V-zX-uiG"/>
                         <viewControllerLayoutGuide type="bottom" id="GZc-vi-ru2"/>
@@ -645,7 +643,7 @@ neimoidia</string>
         <!--The Game-->
         <scene sceneID="ToI-rA-06p">
             <objects>
-                <viewController id="0vk-cp-MnJ" customClass="PlayViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0vk-cp-MnJ" customClass="PlayViewController" customModule="Yoda_s_Box" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsU-gP-2PQ"/>
                         <viewControllerLayoutGuide type="bottom" id="BZq-TK-InP"/>
@@ -702,7 +700,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="eN0-0f-ou1" secondAttribute="height" multiplier="249:53" id="urN-0Q-ZHw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_3.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_3.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -718,7 +716,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="vRz-05-KcQ" secondAttribute="height" multiplier="1:1" id="w0N-OD-Uhu"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CId-NK-zOz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CId-NK-zOz">
                                 <rect key="frame" x="89" y="210" width="52" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -736,7 +734,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" constant="20" id="r2s-8C-ugn"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-6m-Pzx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-6m-Pzx">
                                 <rect key="frame" x="184" y="210" width="80" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3Ve-ZI-XVw"/>
@@ -752,7 +750,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" constant="20" id="jUm-cX-lik"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-GM-IuZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-GM-IuZ">
                                 <rect key="frame" x="89" y="248" width="35" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -765,13 +763,13 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="CdJ-Hh-rcr" secondAttribute="height" multiplier="1:1" id="jz3-Zq-6Uh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="172" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKk-An-Ibj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKk-An-Ibj">
                                 <rect key="frame" x="89" y="286" width="26" height="12"/>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp9-u4-9q7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp9-u4-9q7">
                                 <rect key="frame" x="184" y="247" width="80" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Pix-p7-DW7"/>
@@ -786,13 +784,11 @@ neimoidia</string>
                                     <constraint firstAttribute="width" constant="20" id="hom-2I-WLV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh8-Ou-9g3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC  " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh8-Ou-9g3">
                                 <rect key="frame" x="184" y="284" width="80" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="jS5-XF-ewP"/>
                                 </constraints>
-                                <string key="text">Cato
-neimoidia</string>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -811,7 +807,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="gRh-yH-x6R" secondAttribute="height" multiplier="249:53" id="i1s-H6-cfz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_2.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_2.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -825,7 +821,7 @@ neimoidia</string>
                                     <constraint firstAttribute="width" secondItem="ueo-rD-XZ2" secondAttribute="height" multiplier="249:53" id="e05-z8-NFF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="14"/>
-                                <state key="normal" title="Luke Skywalker" backgroundImage="background_button_1.png">
+                                <state key="normal" title="NC" backgroundImage="background_button_1.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -899,6 +895,12 @@ neimoidia</string>
                         <outlet property="btnOne" destination="ueo-rD-XZ2" id="DjZ-rL-090"/>
                         <outlet property="btnThree" destination="eN0-0f-ou1" id="ZaM-R1-NhA"/>
                         <outlet property="btnTwo" destination="gRh-yH-x6R" id="a4J-zz-rxV"/>
+                        <outlet property="clueEyes" destination="Mxc-GM-IuZ" id="nbu-s5-ZSW"/>
+                        <outlet property="clueFace" destination="fp9-u4-9q7" id="iNH-Fg-c4Y"/>
+                        <outlet property="clueHair" destination="GY8-6m-Pzx" id="Zze-ye-pYK"/>
+                        <outlet property="cluePlanet" destination="jh8-Ou-9g3" id="zy2-O3-8N4"/>
+                        <outlet property="clueSexe" destination="CId-NK-zOz" id="yk1-lw-mww"/>
+                        <outlet property="clueSize" destination="FKk-An-Ibj" id="YWq-k7-AB0"/>
                         <outlet property="scoreDisplay" destination="qeZ-u9-gtF" id="Xjo-dG-gJ9"/>
                     </connections>
                 </viewController>
@@ -936,6 +938,6 @@ neimoidia</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UEs-Q7-pHA"/>
+        <segue reference="bjn-c4-0vC"/>
     </inferredMetricsTieBreakers>
 </document>

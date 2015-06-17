@@ -14,9 +14,19 @@ class PlayViewController: UIViewController {
     var score:Int = 0;
     
     @IBOutlet weak var scoreDisplay: UILabel!
+    
+    // BTN OUTLET
     @IBOutlet weak var btnThree: UIButton!
     @IBOutlet weak var btnTwo: UIButton!
     @IBOutlet weak var btnOne: UIButton!
+    
+    // CLUE OUTLET
+    @IBOutlet weak var clueSexe: UILabel!
+    @IBOutlet weak var clueHair: UILabel!
+    @IBOutlet weak var clueEyes: UILabel!
+    @IBOutlet weak var clueFace: UILabel!
+    @IBOutlet weak var clueSize: UILabel!
+    @IBOutlet weak var cluePlanet: UILabel!
     
     @IBAction func btnOneAction(sender: AnyObject) { nextQuestion(1) }
     @IBAction func btnTwoAction(sender: AnyObject) { nextQuestion(2) }
