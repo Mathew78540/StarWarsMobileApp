@@ -48,6 +48,7 @@
 		D9F70F5A1B2C704D00E59C9E /* icon_rule.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F541B2C704D00E59C9E /* icon_rule.png */; };
 		D9F70F5C1B2C84D900E59C9E /* logo_text.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F5B1B2C84D900E59C9E /* logo_text.png */; };
 		D9F70F5F1B2C90F400E59C9E /* close_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = D9F70F5D1B2C90F400E59C9E /* close_btn.png */; };
+		D9FCD9281B31FC420055FB83 /* wrongAnswer_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D9FCD9271B31FC420055FB83 /* wrongAnswer_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		D9F70F541B2C704D00E59C9E /* icon_rule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_rule.png; path = Images.xcassets/icon_rule.png; sourceTree = "<group>"; };
 		D9F70F5B1B2C84D900E59C9E /* logo_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_text.png; path = Images.xcassets/logo_text.png; sourceTree = "<group>"; };
 		D9F70F5D1B2C90F400E59C9E /* close_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close_btn.png; path = Images.xcassets/close_btn.png; sourceTree = "<group>"; };
+		D9FCD9271B31FC420055FB83 /* wrongAnswer_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wrongAnswer_background.png; path = Images.xcassets/wrongAnswer_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 		D98139921B2DD50300BBAC5B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D9FCD9271B31FC420055FB83 /* wrongAnswer_background.png */,
 				D928BC1F1B2ED92A0082F121 /* yoda_galactique.png */,
 				D921CCBF1B2E3624007780EE /* answer_background.png */,
 				D921CCC01B2E3624007780EE /* google_image_api_sample.png */,
@@ -370,6 +373,7 @@
 				D921CCC41B2E3624007780EE /* result_image_border.png in Resources */,
 				D981399C1B2E0FEA00BBAC5B /* yoda.png in Resources */,
 				D921CCC21B2E3624007780EE /* answer_background.png in Resources */,
+				D9FCD9281B31FC420055FB83 /* wrongAnswer_background.png in Resources */,
 				D9F70F571B2C704D00E59C9E /* icon_gender.png in Resources */,
 				D9F70F581B2C704D00E59C9E /* icon_hair.png in Resources */,
 				D93CE3591B2ADB0200EDAED2 /* background_button_1.png in Resources */,
