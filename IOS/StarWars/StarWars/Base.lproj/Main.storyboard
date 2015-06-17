@@ -136,15 +136,6 @@
                                     <constraint firstAttribute="width" constant="20" id="t9g-5p-BKa"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Rq-bvO">
-                                <rect key="frame" x="184" y="210" width="80" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="AXl-zn-Y0U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_eye.png" translatesAutoresizingMaskIntoConstraints="NO" id="yVu-yB-nZQ">
                                 <rect key="frame" x="56" y="243" width="20" height="20"/>
                                 <constraints>
@@ -234,6 +225,15 @@
                                     <action selector="btnOneAction:" destination="BxN-N6-UCy" eventType="touchUpInside" id="DO1-hR-Jr5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NC" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-Rq-bvO">
+                                <rect key="frame" x="184" y="210" width="80" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AXl-zn-Y0U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -300,6 +300,12 @@
                         <outlet property="btnOne" destination="Ml5-bf-Fqm" id="L0H-kk-rMX"/>
                         <outlet property="btnThree" destination="rAZ-qQ-qLh" id="5Wz-bK-Em7"/>
                         <outlet property="btnTwo" destination="pqs-Wr-IUs" id="k0W-Tc-R6X"/>
+                        <outlet property="clueEyes" destination="wp6-gD-lu3" id="JmJ-LE-uXe"/>
+                        <outlet property="clueFace" destination="dFW-aj-Jaw" id="Fl3-R8-5rL"/>
+                        <outlet property="clueGender" destination="HYP-e2-3m9" id="oI7-l1-BCM"/>
+                        <outlet property="clueHair" destination="d0Z-Rq-bvO" id="57h-4x-onL"/>
+                        <outlet property="cluePlanet" destination="5qZ-LH-ZSh" id="ucR-lA-NrE"/>
+                        <outlet property="clueSize" destination="lk6-mA-KY1" id="0PM-Lp-Aag"/>
                         <outlet property="scoreDisplay" destination="4nn-Oh-AHg" id="r9y-o0-Jq5"/>
                     </connections>
                 </viewController>

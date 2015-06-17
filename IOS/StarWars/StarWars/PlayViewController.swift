@@ -21,16 +21,16 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var btnOne: UIButton!
     
     // CLUE OUTLET
-    @IBOutlet weak var clueSexe: UILabel!
-    @IBOutlet weak var clueHair: UILabel!
+    @IBOutlet weak var clueGender: UILabel!
     @IBOutlet weak var clueEyes: UILabel!
-    @IBOutlet weak var clueFace: UILabel!
     @IBOutlet weak var clueSize: UILabel!
+    @IBOutlet weak var clueHair: UILabel!
+    @IBOutlet weak var clueFace: UILabel!
     @IBOutlet weak var cluePlanet: UILabel!
     
-    @IBAction func btnOneAction(sender: AnyObject) { nextQuestion(1) }
-    @IBAction func btnTwoAction(sender: AnyObject) { nextQuestion(2) }
-    @IBAction func btnThreeAction(sender: AnyObject) { nextQuestion(3) }
+    @IBAction func btnOneAction(sender: AnyObject) { }
+    @IBAction func btnTwoAction(sender: AnyObject) { }
+    @IBAction func btnThreeAction(sender: AnyObject) { }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
@@ -39,7 +39,7 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.nextQuestion(0); // Init the game
+        self.nextQuestion(); // Init the game
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,96 +47,61 @@ class PlayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-     ******
-     * Return Dictionary with random People
-     ******
-     */
-    func randomPeople(callback: ([String:String]) -> Void){
-        
-        let randomPage:UInt32                       = arc4random_uniform(8);
-        let randomPeople:UInt32                     = arc4random_uniform(10);
-        var peopleInfo:Dictionary<String,String>    = Dictionary<String,String>();
-        
-        // PEOPLE INFORMATION
-        SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
-            
-            peopleInfo["name"]          = people["results"][Int(randomPeople)]["name"].stringValue;
-            peopleInfo["eye_color"]     = people["results"][Int(randomPeople)]["eye_color"].stringValue;
-            peopleInfo["height"]        = people["results"][Int(randomPeople)]["height"].stringValue;
-            peopleInfo["mass"]          = people["results"][Int(randomPeople)]["mass"].stringValue;
-            peopleInfo["skin_color"]    = people["results"][Int(randomPeople)]["skin_color"].stringValue;
-            peopleInfo["gender"]        = people["results"][Int(randomPeople)]["gender"].stringValue;
-            peopleInfo["hair_color"]    = people["results"][Int(randomPeople)]["hair_color"].stringValue;
-            peopleInfo["homeworld"]     = people["results"][Int(randomPeople)]["homeworld"].stringValue;
-            
-            // PLANET
-            SwApi.Planet(peopleInfo["homeworld"]!, response: { (planetData: JSON) -> () in
-                
-                peopleInfo["planet"] = planetData["name"].stringValue;
-                
-                // PICTURE
-                GoogleImageApi.getPicture(peopleInfo["name"]!, response: { (pictures: JSON) -> () in
-                    
-                    peopleInfo["picture"] = pictures[0]["url"].stringValue;
-                    
-                    callback(peopleInfo);
-                    
-                });
-                
-            });
-            
-        });
-        
-    }
-    
-    /*
-    ******
-    * Return Dictionary with two name in random
-    ******
-    */
-    func randomAnswer(callback: ([String]) -> Void){
-        
-        let randomPage:UInt32                       = arc4random_uniform(8);
-        let randomPeople1:UInt32                    = arc4random_uniform(10);
-        let randomPeople2:UInt32                    = arc4random_uniform(10);
-        var peopleInfo                              = [String]()
-        
-        // PEOPLE INFORMATION
-        SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
-            
-            peopleInfo.append(people["results"][Int(randomPeople1)]["name"].stringValue);
-            peopleInfo.append(people["results"][Int(randomPeople2)]["name"].stringValue);
-            
-            callback(peopleInfo);
-
-        });
-        
-    }
-    
-    func endQuizz(){
-        // Display the result :)
-    }
-    
-    func nextQuestion(id:Int){
-        self.score++;
+    // Next Question
+    func nextQuestion(){
         self.scoreDisplay.text = String(self.score);
         
-        //        self.randomPeople {
-        //            (peopleInfo) in
-        //
-        //            println(peopleInfo);
-        //
-        //            self.randomAnswer {
-        //                (randomAnswer) in
-        //
-        //                println(randomAnswer)
-        //                
-        //            }
-        //            
-        //        }
+        Quizz.randomPeople {
+            (peopleInfo) in
+            self.displayClues(peopleInfo);
+            
+            Quizz.randomAnswer {
+                (name_1) in
+                
+                Quizz.randomAnswer {
+                    (name_2) in
+                    
+                    self.displayAnswers(peopleInfo, name1: name_1, name2: name_2);
+                }
+            }
+        }
+    }
+    
+    // Reset Clues Text and Btn Title
+    func resetCluesAndAnswers(){
+        
+        let loadingText:String = "NC";
+        
+        self.clueGender.text    = loadingText;
+        self.clueEyes.text      = loadingText;
+        self.clueSize.text      = loadingText;
+        self.clueHair.text      = loadingText;
+        self.clueFace.text      = loadingText;
+        self.cluePlanet.text    = loadingText;
+        
+        self.btnOne.setTitle(loadingText, forState: UIControlState.Normal);
+        self.btnTwo.setTitle(loadingText, forState: UIControlState.Normal);
+        self.btnThree.setTitle(loadingText, forState: UIControlState.Normal);
 
-        // TODO Display next Question :)
+    }
+    
+    // Display Clues
+    func displayClues(clues:[String:String]){
+        
+        self.clueGender.text    = clues["gender"];
+        self.clueEyes.text      = clues["eye_color"];
+        self.clueSize.text      = clues["height"];
+        self.clueHair.text      = clues["hair_color"];
+        self.clueFace.text      = clues["skin_color"];
+        self.cluePlanet.text    = clues["planet"];
+        
+    }
+    
+    // Display Answers
+    func displayAnswers(gAnswers:[String:String], name1:String, name2:String){
+        self.btnOne.setTitle(gAnswers["name"], forState: UIControlState.Normal);
+        self.btnTwo.setTitle(name1, forState: UIControlState.Normal);
+        self.btnThree.setTitle(name2, forState: UIControlState.Normal);
     }
     
 }
