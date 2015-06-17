@@ -55,6 +55,8 @@ class PlayViewController: UIViewController {
         
         Quizz.randomPeople {
             (peopleInfo) in
+            
+            println(peopleInfo);
             self.displayClues(peopleInfo);
             
             Quizz.randomAnswer {

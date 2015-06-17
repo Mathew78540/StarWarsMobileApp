@@ -56,15 +56,19 @@ struct Quizz {
     
     static func randomAnswer(callback: (String) -> Void) {
         
-        let randomPage:UInt32                       = arc4random_uniform(8);
-        let randomPeople1:UInt32                    = arc4random_uniform(9);
-        let randomPeople2:UInt32                    = arc4random_uniform(9);
-        var peopleName                              = String();
+        var randomPage:UInt32 = arc4random_uniform(86);
+        
+        
+        if(Int(randomPage) == 0 || Int(randomPage) == 17) {
+            randomPage = 18;
+        }
         
         // PEOPLE INFORMATION
-        SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
+        SwApi.People(Int(randomPage), response: { (people: JSON) -> () in
+                        
+            let name:String = people["name"].stringValue;
             
-            callback(people["results"][Int(randomPeople1)]["name"].stringValue);
+            callback(name);
             
         });
         
