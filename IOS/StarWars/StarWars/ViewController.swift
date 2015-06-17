@@ -12,11 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var BtnPlay: UIButton!
     @IBOutlet weak var BtnHowPlay: UIButton!
-    @IBOutlet weak var BtnYourResults: UIButton!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        navigationController?.navigationBar.hidden = true; // for navigation bar hide
+        navigationController?.navigationBar.hidden = true;
     }
     
     override func viewDidLoad() {

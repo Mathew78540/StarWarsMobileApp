@@ -24,6 +24,7 @@ struct GoogleImageApi {
     */
     static func getPicture(name: String, response: (JSON) -> ()){
         
+        print(name);
         
         let urlAPI = NSURL(string: GoogleImageApi.baseUrl + name.replace(" ", replacement: ""));
                 

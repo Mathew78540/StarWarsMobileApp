@@ -11,8 +11,10 @@ import SwiftyJSON
 
 class PlayViewController: UIViewController {
     
-    var score:Int = 0;
+    var score:Int                   = 0;
     var currentGoodAnswerNumber:Int = 0;
+    var picture:String              = "";
+    var name:String                 = "";
     
     @IBOutlet weak var scoreDisplay: UILabel!
     
@@ -34,9 +36,10 @@ class PlayViewController: UIViewController {
     @IBAction func btnTwoAction(sender: AnyObject) { self.checkAnswer(1); }
     @IBAction func btnThreeAction(sender: AnyObject) { self.checkAnswer(2); }
     
+    // OVERRIDE
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        navigationController?.navigationBar.hidden = true; // for navigation bar hide
+        navigationController?.navigationBar.hidden = true;
     }
     
     override func viewDidLoad() {
@@ -46,11 +49,32 @@ class PlayViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // Next Question
+    // PREPARE SEGUE
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if (segue.identifier == "answerView") {
+            var goodAnswerView:GoodAnswerViewController = segue.destinationViewController as! GoodAnswerViewController;
+            
+            goodAnswerView.score = self.score;
+            goodAnswerView.name  = self.name;
+            goodAnswerView.image = self.picture;
+        }
+        
+        if (segue.identifier == "badanswerView") {
+            var badAnswerView:BadAnswerViewController = segue.destinationViewController as! BadAnswerViewController;
+            
+            badAnswerView.score = self.score;
+            badAnswerView.name  = self.name;
+            badAnswerView.image = self.picture;
+        }
+    
+    }
+    
+    // NEXT QUESTION
     func nextQuestion(){
+        
         self.scoreDisplay.text = String(self.score);
         self.resetCluesAndAnswers();
         
@@ -58,7 +82,11 @@ class PlayViewController: UIViewController {
             (peopleInfo) in
             
             println(peopleInfo);
+            
             self.displayClues(peopleInfo);
+        
+            self.name    = peopleInfo["name"]!;
+            self.picture = peopleInfo["picture"]!;
             
             Quizz.randomAnswer {
                 (name_1) in
@@ -70,6 +98,7 @@ class PlayViewController: UIViewController {
                 }
             }
         }
+        
     }
     
     // Reset Clues Text and Btn Title
@@ -108,9 +137,8 @@ class PlayViewController: UIViewController {
         if(id == self.currentGoodAnswerNumber){
             self.score++;
             self.performSegueWithIdentifier("answerView", sender: nil);
-            //self.nextQuestion();
         } else {
-            // TODO
+            self.performSegueWithIdentifier("badanswerView", sender: nil);
         }
         
     }
@@ -119,7 +147,7 @@ class PlayViewController: UIViewController {
     func displayAnswers(gAnswers:[String:String], name1:String, name2:String){
         
         
-        var goodAnswerNumber:UInt32 = arc4random_uniform(2);
+        var goodAnswerNumber:UInt32 = arc4random_uniform(3);
         self.currentGoodAnswerNumber = Int(goodAnswerNumber);
         
         println("The good Answers is on the position : \(goodAnswerNumber)");
