@@ -32,8 +32,9 @@ import bangbang.yodasbox.Network.Network;
 public class ResultatQuestionActivity extends Activity {
 
     private String level, namePersonage, listPersonages;
-    private TextView textWin, levelView, titleView;
-    private ImageView imagePersonage;
+    private boolean win;
+    private TextView nameView, winView, levelView, titleView;
+    private ImageView imagePersonage, imageBackground;
     private YodaSearchResultReceiver receiver;
     private Network network;
 
@@ -54,12 +55,20 @@ public class ResultatQuestionActivity extends Activity {
 
         // Init views
         levelView = (TextView)findViewById(R.id.level);
-        textWin = (TextView)findViewById(R.id.nameResponse);
+        nameView = (TextView)findViewById(R.id.nameResponse);
         imagePersonage = (ImageView)findViewById(R.id.pictureResponse);
+        winView = (TextView)findViewById(R.id.result_text);
+        imageBackground = (ImageView)findViewById(R.id.backgroundImage);
         Button playButton = (Button)findViewById(R.id.continueGame);
 
         getExtras();
 
+        if(!win)
+        {
+            playButton.setText("TRY AGAIN");
+            winView.setText("You failed !");
+            imageBackground.setBackgroundResource(R.drawable.background_image_lost);
+        }
         levelView.setText(level);
 
         receiver = new YodaSearchResultReceiver();
@@ -76,15 +85,24 @@ public class ResultatQuestionActivity extends Activity {
 
 
         // Init all vars
-        textWin.setText(namePersonage);
+        nameView.setText(namePersonage);
         playButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view) {
 
                 Intent gameActivity = new Intent(getApplicationContext(), QuestionActivity.class);
-                gameActivity.putExtra("level", level);
-                gameActivity.putExtra("personagesList", listPersonages);
+                if(win)
+                {
+                    gameActivity.putExtra("level", level);
+                    gameActivity.putExtra("personagesList", listPersonages);
+                }
+                else
+                {
+                    gameActivity.putExtra("level", "0");
+                    gameActivity.putExtra("personagesList", new ArrayList<Integer>().toString());
+                }
+
 
                 startActivity(gameActivity);
 
@@ -99,6 +117,9 @@ public class ResultatQuestionActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         namePersonage = extras.getString("namePersonage");
         level = extras.getString("level");
+
+        if(extras.getString("win") == "false")
+            win = false;
 
         listPersonages = extras.getString("personagesList");
     }

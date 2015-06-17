@@ -63,8 +63,8 @@
                     android:text="@string/result"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dip"
-                    android:textSize="17dip"
+                    android:layout_marginTop="54dip"
+                    android:textSize="14dip"
                     android:gravity="center"/>
 
                 <TextView
@@ -79,6 +79,7 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/backgroundImage"
                 android:layout_width="317dip"
                 android:layout_height="324dip"
                 android:background="@drawable/background_image"

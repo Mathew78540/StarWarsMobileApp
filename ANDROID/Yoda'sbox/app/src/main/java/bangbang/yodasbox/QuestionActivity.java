@@ -67,7 +67,11 @@ public class QuestionActivity extends Activity  {
         Bundle extras = getIntent().getExtras();
 
         if(extras!=null && extras.getString("level") != null)
+        {
+            System.out.println(extras.getString("level"));
             level = Integer.parseInt(extras.getString("level"))+1;
+
+        }
         else
             level = 0;
 
@@ -205,6 +209,7 @@ public class QuestionActivity extends Activity  {
             winActivity.putExtra("namePersonage", hidePerson.getName());
             winActivity.putExtra("level", Integer.toString(level));
             winActivity.putExtra("personagesList", listPersonages.toString());
+            winActivity.putExtra("win", "true");
 
             startActivity(winActivity);
         }
@@ -212,7 +217,14 @@ public class QuestionActivity extends Activity  {
 
     View.OnClickListener loseListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "LOSE", Toast.LENGTH_SHORT).show();
+            Intent winActivity = new Intent(QuestionActivity.this, ResultatQuestionActivity.class);
+            winActivity.putExtra("namePersonage", hidePerson.getName());
+            winActivity.putExtra("level", Integer.toString(level));
+            winActivity.putExtra("personagesList", new ArrayList<Integer>().toString());
+            winActivity.putExtra("win", "false");
+
+
+            startActivity(winActivity);
         }
     };
 
