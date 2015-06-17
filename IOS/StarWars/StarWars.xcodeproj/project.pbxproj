@@ -66,7 +66,7 @@
 		4E3F12DF1B226B3F0054F871 /* background_question.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_question.png; path = StarWars/Images.xcassets/background_question.png; sourceTree = SOURCE_ROOT; };
 		4E3F12E11B226D660054F871 /* background_liste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_liste.png; path = StarWars/Images.xcassets/background_liste.png; sourceTree = SOURCE_ROOT; };
 		4E3F12E31B226E9F0054F871 /* background_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_button.png; path = StarWars/Images.xcassets/background_button.png; sourceTree = SOURCE_ROOT; };
-		4E5874BB1B1871B2000A7916 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5874BB1B1871B2000A7916 /* Yoda's Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yoda's Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5874BF1B1871B2000A7916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E5874C01B1871B2000A7916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E5874C21B1871B2000A7916 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		4E5874BC1B1871B2000A7916 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E5874BB1B1871B2000A7916 /* StarWars.app */,
+				4E5874BB1B1871B2000A7916 /* Yoda's Box.app */,
 				4E5874D01B1871B2000A7916 /* StarWarsTests.xctest */,
 			);
 			name = Products;
@@ -287,7 +287,7 @@
 			);
 			name = StarWars;
 			productName = StarWars;
-			productReference = 4E5874BB1B1871B2000A7916 /* StarWars.app */;
+			productReference = 4E5874BB1B1871B2000A7916 /* Yoda's Box.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4E5874CF1B1871B2000A7916 /* StarWarsTests */ = {
@@ -582,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StarWars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Yoda's Box";
 			};
 			name = Debug;
 		};
@@ -593,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StarWars/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Yoda's Box";
 			};
 			name = Release;
 		};
