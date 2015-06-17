@@ -636,7 +636,7 @@
 				INFOPLIST_FILE = StarWarsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWars.app/StarWars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoda's Box.app/Yoda's Box";
 			};
 			name = Debug;
 		};
@@ -651,7 +651,7 @@
 				INFOPLIST_FILE = StarWarsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWars.app/StarWars";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yoda's Box.app/Yoda's Box";
 			};
 			name = Release;
 		};

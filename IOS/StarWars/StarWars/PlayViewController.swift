@@ -16,6 +16,7 @@ class PlayViewController: UIViewController {
     var picture:String              = "";
     var name:String                 = "";
     
+    // SCORE OUTLER
     @IBOutlet weak var scoreDisplay: UILabel!
     
     // BTN OUTLET
@@ -101,10 +102,10 @@ class PlayViewController: UIViewController {
         
     }
     
-    // Reset Clues Text and Btn Title
+    // RESET CLUES AND ANSWERS
     func resetCluesAndAnswers(){
         
-        let loadingText:String = "NC";
+        let loadingText:String = "Loading";
         
         self.clueGender.text    = loadingText;
         self.clueEyes.text      = loadingText;
@@ -119,7 +120,7 @@ class PlayViewController: UIViewController {
 
     }
     
-    // Display Clues
+    // DISPLAY CLUES
     func displayClues(clues:[String:String]){
         
         self.clueGender.text    = clues["gender"];
@@ -131,7 +132,7 @@ class PlayViewController: UIViewController {
         
     }
     
-    // Function call when user play on button
+    // WHEN USER CLICK ON A BUTTON
     func checkAnswer(id:Int) {
         
         if(id == self.currentGoodAnswerNumber){
@@ -143,7 +144,7 @@ class PlayViewController: UIViewController {
         
     }
     
-    // Display Answers
+    // DISPLAY ANSWERS
     func displayAnswers(gAnswers:[String:String], name1:String, name2:String){
         
         
