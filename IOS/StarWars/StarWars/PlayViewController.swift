@@ -52,6 +52,7 @@ class PlayViewController: UIViewController {
     // Next Question
     func nextQuestion(){
         self.scoreDisplay.text = String(self.score);
+        self.resetCluesAndAnswers();
         
         Quizz.randomPeople {
             (peopleInfo) in

@@ -18,9 +18,13 @@ struct Quizz {
     */
     static func randomPeople(callback: ([String:String]) -> Void){
         
-        let randomPage:UInt32                       = arc4random_uniform(8);
+        var randomPage:UInt32                       = arc4random_uniform(8);
         let randomPeople:UInt32                     = arc4random_uniform(9);
         var peopleInfo:Dictionary<String,String>    = Dictionary<String,String>();
+        
+        if(Int(randomPage) == 0){
+            randomPage = 3;
+        }
         
         // PEOPLE INFORMATION
         SwApi.Peoples(randomPage, response: { (people: JSON) -> () in
