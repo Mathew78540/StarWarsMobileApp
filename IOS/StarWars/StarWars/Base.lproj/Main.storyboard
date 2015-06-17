@@ -79,16 +79,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nn-Oh-AHg">
-                                <rect key="frame" x="258" y="36" width="42" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="TMI-BS-3Qa"/>
-                                    <constraint firstAttribute="width" constant="42" id="UsK-SJ-Aqu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAZ-qQ-qLh">
                                 <rect key="frame" x="36" y="500" width="248" height="53"/>
                                 <constraints>
@@ -223,6 +213,16 @@
                                     <constraint firstAttribute="width" constant="80" id="AXl-zn-Y0U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nn-Oh-AHg">
+                                <rect key="frame" x="258" y="36" width="42" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TMI-BS-3Qa"/>
+                                    <constraint firstAttribute="width" constant="42" id="UsK-SJ-Aqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -814,7 +814,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sO0-lL-wAO"/>
+        <segue reference="sU6-i3-tzw"/>
         <segue reference="uLk-XR-1nN"/>
     </inferredMetricsTieBreakers>
 </document>
