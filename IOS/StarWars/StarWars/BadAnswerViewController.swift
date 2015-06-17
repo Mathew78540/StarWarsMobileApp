@@ -10,14 +10,17 @@ import UIKit
 
 class BadAnswerViewController: UIViewController {
     
+    // PARAMS IN SEGUET
     var name:String     = "";
     var image:String    = "";
     var score:Int       = 0;
     
+    // OUTLETS
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    // DETECT VALUE IN SEGUET AND ADD IT IN THE VIEW
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
         navigationController?.navigationBar.hidden = true;

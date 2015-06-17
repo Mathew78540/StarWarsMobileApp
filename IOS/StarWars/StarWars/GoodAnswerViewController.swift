@@ -10,14 +10,17 @@ import UIKit
 
 class GoodAnswerViewController: UIViewController {
     
+    // PARAMS IN SEGUET
     var name:String     = "";
     var image:String    = "";
     var score:Int       = 0;
     
+    // OUTLETS
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    // DETECT VALUE IN SEGUET AND ADD IT IN THE VIEW
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
         navigationController?.navigationBar.hidden = true;
@@ -37,6 +40,7 @@ class GoodAnswerViewController: UIViewController {
         
     }
     
+    // SEND THE SCORE IN THE PLAYVIEW
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var playView:PlayViewController = segue.destinationViewController as! PlayViewController;
         
