@@ -117,9 +117,7 @@ public class ResultatQuestionActivity extends Activity {
         Bundle extras = getIntent().getExtras();
         namePersonage = extras.getString("namePersonage");
         level = extras.getString("level");
-
-        if(extras.getString("win") == "false")
-            win = false;
+        win = extras.getBoolean("win");
 
         listPersonages = extras.getString("personagesList");
     }
@@ -130,7 +128,7 @@ public class ResultatQuestionActivity extends Activity {
         public void onReceive(Context context, Intent intent)
         {
             if(intent.getExtras().containsKey(Network.YODA_SEARCH_URL_IMAGE_EXTRA))
-                network.downloadImage((String) intent.getSerializableExtra(Network.YODA_SEARCH_URL_IMAGE_EXTRA), imagePersonage, getApplicationContext());
+                network.downloadImage((String) intent.getSerializableExtra(Network.YODA_SEARCH_URL_IMAGE_EXTRA), getApplicationContext());
 
 
             if(intent.getExtras().containsKey(Network.YODA_SEARCH_IMAGE_EXTRA))
