@@ -15,6 +15,7 @@ class PlayViewController: UIViewController {
     var currentGoodAnswerNumber:Int = 0;
     var picture:String              = "";
     var name:String                 = "";
+    var canClick:Bool               = false;
     
     // SCORE OUTLER
     @IBOutlet weak var scoreDisplay: UILabel!
@@ -91,6 +92,7 @@ class PlayViewController: UIViewController {
                 Quizz.randomAnswer {
                     (name_2) in
                     
+                    self.canClick = true; // Can click
                     self.displayClues(peopleInfo); // Display Clues
                     self.displayAnswers(peopleInfo, name1: name_1, name2: name_2); // Display Answers
                     
@@ -133,11 +135,13 @@ class PlayViewController: UIViewController {
     // WHEN USER CLICK ON A BUTTON
     func checkAnswer(id:Int) {
         
-        if(id == self.currentGoodAnswerNumber){
-            self.score++;
-            self.performSegueWithIdentifier("answerView", sender: nil);
-        } else {
-            self.performSegueWithIdentifier("badanswerView", sender: nil);
+        if(self.canClick){
+            if(id == self.currentGoodAnswerNumber){
+                self.score++;
+                self.performSegueWithIdentifier("answerView", sender: nil);
+            } else {
+                self.performSegueWithIdentifier("badanswerView", sender: nil);
+            }
         }
         
     }
