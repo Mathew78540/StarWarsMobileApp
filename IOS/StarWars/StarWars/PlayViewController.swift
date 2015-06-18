@@ -81,8 +81,6 @@ class PlayViewController: UIViewController {
         
         Quizz.randomPeople {
             (peopleInfo) in
-            
-            self.displayClues(peopleInfo);
         
             self.name    = peopleInfo["name"]!; // Add the value on the scope (Use for segue)
             self.picture = peopleInfo["picture"]!; // Add the value on the scope (Use for segue)
@@ -93,7 +91,9 @@ class PlayViewController: UIViewController {
                 Quizz.randomAnswer {
                     (name_2) in
                     
-                    self.displayAnswers(peopleInfo, name1: name_1, name2: name_2);
+                    self.displayClues(peopleInfo); // Display Clues
+                    self.displayAnswers(peopleInfo, name1: name_1, name2: name_2); // Display Answers
+                    
                 }
             }
         }
