@@ -25,6 +25,9 @@
             <string>OCRAStd</string>
             <string>OCRAStd</string>
             <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
+            <string>OCRAStd</string>
         </mutableArray>
         <mutableArray key="starjedi.ttf">
             <string>StarJedi</string>
@@ -222,7 +225,7 @@
                                     <constraint firstAttribute="height" constant="44" id="TMI-BS-3Qa"/>
                                     <constraint firstAttribute="width" constant="42" id="UsK-SJ-Aqu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -261,6 +264,7 @@
                             <constraint firstItem="pqs-Wr-IUs" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="20" id="SxX-RO-AIh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5qZ-LH-ZSh" secondAttribute="trailing" constant="40" id="T3e-d0-TWS"/>
                             <constraint firstItem="pqs-Wr-IUs" firstAttribute="top" secondItem="Ml5-bf-Fqm" secondAttribute="bottom" constant="13" id="Tf1-Vs-dlS"/>
+                            <constraint firstItem="4nn-Oh-AHg" firstAttribute="top" secondItem="r0E-3h-oZs" secondAttribute="bottom" constant="18" id="WBN-8Y-bln"/>
                             <constraint firstItem="kFL-wb-bof" firstAttribute="width" secondItem="kFL-wb-bof" secondAttribute="height" multiplier="1:1" id="XQA-3b-IOb"/>
                             <constraint firstItem="Ml5-bf-Fqm" firstAttribute="leading" secondItem="1J0-uo-VbF" secondAttribute="leadingMargin" constant="20" id="YTY-0A-BIM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Zb-XA-HGT" secondAttribute="trailing" constant="15" id="Zdt-ju-YDi"/>
@@ -413,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="237"/>
+            <point key="canvasLocation" x="743" y="237"/>
         </scene>
         <!--How Play-->
         <scene sceneID="M5k-Qk-ZMX">
@@ -500,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmu-fr-h7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1101" y="237"/>
+            <point key="canvasLocation" x="1149" y="237"/>
         </scene>
         <!--Good Answer View Controller-->
         <scene sceneID="uSZ-WP-9dx">
@@ -586,7 +590,7 @@
                                     <constraint firstAttribute="height" constant="44" id="0dd-NY-fIQ"/>
                                     <constraint firstAttribute="width" constant="42" id="9Bp-GB-IdS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -716,7 +720,7 @@
                                     <constraint firstAttribute="width" constant="42" id="Eyx-ae-TDR"/>
                                     <constraint firstAttribute="height" constant="44" id="GCd-yc-z6b"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="OCRAStd" family="OCR A Std" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -814,7 +818,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0bR-KS-Mi0"/>
         <segue reference="uLk-XR-1nN"/>
+        <segue reference="0bR-KS-Mi0"/>
     </inferredMetricsTieBreakers>
 </document>
