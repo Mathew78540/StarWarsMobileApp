@@ -23,7 +23,7 @@ struct Quizz {
         var peopleInfo:Dictionary<String,String>    = Dictionary<String,String>();
         
         if(Int(randomPage) == 0){
-            randomPage = 3;
+            randomPage = 3; // Temporary Fix
         }
         
         // PEOPLE INFORMATION
@@ -57,13 +57,18 @@ struct Quizz {
         
     }
     
+    /*
+    ******
+    * Return random name
+    ******
+    */
     static func randomAnswer(callback: (String) -> Void) {
         
         var randomPage:UInt32 = arc4random_uniform(86);
         
         
         if(Int(randomPage) == 0 || Int(randomPage) == 17) {
-            randomPage = 18;
+            randomPage = 18; // Temporary Fix
         }
         
         // PEOPLE INFORMATION

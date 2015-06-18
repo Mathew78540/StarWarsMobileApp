@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class PlayViewController: UIViewController {
     
+    // GLOBAL VARIABLE IN SCOPE
     var score:Int                   = 0;
     var currentGoodAnswerNumber:Int = 0;
     var picture:String              = "";

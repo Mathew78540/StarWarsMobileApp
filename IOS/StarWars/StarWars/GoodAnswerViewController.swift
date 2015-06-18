@@ -10,7 +10,7 @@ import UIKit
 
 class GoodAnswerViewController: UIViewController {
     
-    // PARAMS IN SEGUET
+    // GLOBAL VARIABLE IN SCOPE
     var name:String     = "";
     var image:String    = "";
     var score:Int       = 0;
