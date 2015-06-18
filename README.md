@@ -14,6 +14,7 @@ Small application to learn about the world of Star Wars.
 | Marion RIBES  | Designer  |
 | Robin Mastro  | Designer  |
 | Caroline Vien  | Designer  |
+| JEAN CHRISTOPHE Petit  | Designer  |
 
 #### Languages :
 
