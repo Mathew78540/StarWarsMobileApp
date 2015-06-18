@@ -161,21 +161,21 @@ class PlayViewController: UIViewController {
         
         if(Int(goodAnswerNumber) == 0){
             
-            self.btnOne.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
+            self.btnOne.setTitle(gAnswers["name"]!, forState: UIControlState.Normal);
             self.btnTwo.setTitle(name1, forState: UIControlState.Normal);
             self.btnThree.setTitle(name2, forState: UIControlState.Normal);
             
         } else if (Int(goodAnswerNumber) == 1){
             
             self.btnOne.setTitle(name1, forState: UIControlState.Normal);
-            self.btnTwo.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
+            self.btnTwo.setTitle(gAnswers["name"], forState: UIControlState.Normal);
             self.btnThree.setTitle(name2, forState: UIControlState.Normal);
             
         } else if(Int(goodAnswerNumber) == 2) {
             
             self.btnOne.setTitle(name2, forState: UIControlState.Normal);
             self.btnTwo.setTitle(name1, forState: UIControlState.Normal);
-            self.btnThree.setTitle(gAnswers["name"]!+"- (G)", forState: UIControlState.Normal);
+            self.btnThree.setTitle(gAnswers["name"], forState: UIControlState.Normal);
             
         } else {
             // ERROR
