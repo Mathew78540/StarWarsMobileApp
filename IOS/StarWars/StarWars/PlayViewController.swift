@@ -57,6 +57,7 @@ class PlayViewController: UIViewController {
     // PREPARE SEGUE
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        // Segue for the view GoodAnswer
         if (segue.identifier == "answerView") {
             var goodAnswerView:GoodAnswerViewController = segue.destinationViewController as! GoodAnswerViewController;
             
@@ -65,6 +66,7 @@ class PlayViewController: UIViewController {
             goodAnswerView.image = self.picture;
         }
         
+        // Segue for the view BadAnswer
         if (segue.identifier == "badanswerView") {
             var badAnswerView:BadAnswerViewController = segue.destinationViewController as! BadAnswerViewController;
             

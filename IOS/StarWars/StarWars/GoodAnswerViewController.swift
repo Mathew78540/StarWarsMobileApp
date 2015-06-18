@@ -34,7 +34,7 @@ class GoodAnswerViewController: UIViewController {
         if let url = NSURL(string: image) {
             if let data = NSData(contentsOfURL: url){
                 imageView.contentMode = UIViewContentMode.ScaleAspectFit
-                imageView.image = UIImage(data: data)
+                imageView.image       = UIImage(data: data)
             }
         }
         
