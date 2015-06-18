@@ -4,8 +4,9 @@
     <string name="settings">Settings</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="play">Play</string>
-    <string name="informations">Informations</string>
+    <string name="textHome">Find the right character you must</string>
+    <string name="start">Start</string>
+    <string name="informations">i</string>
     <string name="character_name">Toto</string>
     <string name="title_activity_question">QuestionActivity</string>
     <string name="action_settings">Settings</string>
