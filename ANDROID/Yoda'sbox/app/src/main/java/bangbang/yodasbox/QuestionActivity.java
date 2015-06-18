@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 
@@ -38,7 +39,7 @@ public class QuestionActivity extends Activity  {
     private ArrayList<Integer> listPersonages;
     private CharacterResultJSON hidePerson, fake1Person, fake2Person;
 
-    private TextView levelView, gender, eye_color, skin_color, hair_color, height, homeworld;
+    private TextView levelView, gender, eye_color, skin_color, hair_color, height, homeworld, titleView;
     private ArrayList<Button> listChoice;
 
 
@@ -48,6 +49,12 @@ public class QuestionActivity extends Activity  {
         ActionBar actionBar = getActionBar();
         actionBar.hide();
         setContentView(R.layout.question_layout);
+
+        // Set font for title
+        titleView = (TextView)findViewById(R.id.app_name);
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "fonts/starjedi.ttf");
+        titleView.setTypeface(face);
 
         // set receiver for API's call
         receiver = new YodaSearchResultReceiver();
@@ -67,11 +74,7 @@ public class QuestionActivity extends Activity  {
         Bundle extras = getIntent().getExtras();
 
         if(extras!=null && extras.getString("level") != null)
-        {
-            System.out.println(extras.getString("level"));
             level = Integer.parseInt(extras.getString("level"))+1;
-
-        }
         else
             level = 0;
 
@@ -80,7 +83,6 @@ public class QuestionActivity extends Activity  {
         {
             String[] listPersonagesStrings = extras.getString("personagesList").split(",");
 
-            System.out.println(listPersonagesStrings.toString());
             for (int i = 0; i < listPersonagesStrings.length; i++)
             {
                 String personageNumberString = listPersonagesStrings[i].replace("[","").replace("]","").trim();
@@ -129,10 +131,6 @@ public class QuestionActivity extends Activity  {
             fake2 = generateUniquePersonage();
         } while(fake2 == fake1);
         networkAccess.requestYoda("people", fake2);
-
-        System.out.println(fake1);
-        System.out.println(fake2);
-        System.out.println(listPersonages.get(listPersonages.size()-1));
     }
 
     public int generateUniquePersonage()

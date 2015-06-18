@@ -10,7 +10,6 @@ import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.support.v4.content.LocalBroadcastManager;
@@ -66,15 +65,23 @@ public class ResultatQuestionActivity extends Activity {
         if(!win)
         {
             playButton.setText("TRY AGAIN");
-            winView.setText("You failed !");
+            winView.setText("Sorry, the good answer was");
             imageBackground.setBackgroundResource(R.drawable.background_image_lost);
+            levelView.setText(level);
         }
-        levelView.setText(level);
+        else
+        {
+            levelView.setText(level);
+            //levelView.setText(Integer.parseInt(level)+1);
+        }
+
+
 
         receiver = new YodaSearchResultReceiver();
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter(Network.YODA_REQUEST_INTENT));
 
         network = new Network();
+
         try {
             network.requestYodaImage(URLEncoder.encode(namePersonage +" StarWars", "UTF-8"));
         }
@@ -99,7 +106,7 @@ public class ResultatQuestionActivity extends Activity {
                 }
                 else
                 {
-                    gameActivity.putExtra("level", "0");
+                    gameActivity.putExtra("level", "-1");
                     gameActivity.putExtra("personagesList", new ArrayList<Integer>().toString());
                 }
 
@@ -124,11 +131,18 @@ public class ResultatQuestionActivity extends Activity {
 
     class YodaSearchResultReceiver extends BroadcastReceiver
     {
+
+
         @Override
         public void onReceive(Context context, Intent intent)
         {
             if(intent.getExtras().containsKey(Network.YODA_SEARCH_URL_IMAGE_EXTRA))
-                network.downloadImage((String) intent.getSerializableExtra(Network.YODA_SEARCH_URL_IMAGE_EXTRA), getApplicationContext());
+                network.downloadImage(
+                        (String) intent.getSerializableExtra(Network.YODA_SEARCH_URL_IMAGE_EXTRA),
+                        namePersonage.trim()+".png",
+                        getApplicationContext()
+                );
+
 
 
             if(intent.getExtras().containsKey(Network.YODA_SEARCH_IMAGE_EXTRA))

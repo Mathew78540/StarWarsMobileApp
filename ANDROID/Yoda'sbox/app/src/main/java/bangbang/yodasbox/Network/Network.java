@@ -45,7 +45,7 @@ public class Network {
     public static final String YODA_SEARCH_PLANET_EXTRA = "yodaExtraPlanet";
 
 
-    public static final String YODA_SEARCH_URL_IMAGE_EXTRA = "yodaExtraImage";
+    public static final String YODA_SEARCH_URL_IMAGE_EXTRA = "yodaExtraImageURL";
     public static final String YODA_SEARCH_IMAGE_EXTRA = "yodaExtraImage";
 
 
@@ -185,18 +185,20 @@ public class Network {
     }
 
 
-    public void downloadImage(String url, Context ctx)
+    public void downloadImage(String url, String nameFile, Context ctx)
     {
-        new DownloadImageTask(ctx).execute(url);
+        new DownloadImageTask(ctx, nameFile).execute(url);
     }
 
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap>
     {
         private Context context;
+        private String nameFile;
 
-        public DownloadImageTask(Context ctx)
+        public DownloadImageTask(Context ctx, String nameFile)
         {
             this.context = ctx;
+            this.nameFile = nameFile;
         }
 
         protected Bitmap doInBackground(String... urls) {
@@ -216,18 +218,15 @@ public class Network {
 
         protected void onPostExecute(Bitmap result) {
             try {
-                //Write file
-                String filename = "bitmap.png";
-                FileOutputStream stream = context.openFileOutput(filename, Context.MODE_PRIVATE);
+
+                FileOutputStream stream = context.openFileOutput(nameFile, Context.MODE_PRIVATE);
                 result.compress(Bitmap.CompressFormat.PNG, 100, stream);
 
-                //Cleanup
                 stream.close();
                 result.recycle();
 
-
                 Intent intent = new Intent(YODA_REQUEST_INTENT);
-                intent.putExtra(YODA_SEARCH_IMAGE_EXTRA, filename);
+                intent.putExtra(YODA_SEARCH_IMAGE_EXTRA, nameFile);
 
                 LocalBroadcastManager.getInstance(MyApp.getInstance().getApplicationContext()).sendBroadcast(intent);
 

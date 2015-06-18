@@ -23,7 +23,7 @@ public class FirstActivity extends Activity {
         setContentView(R.layout.main_layout);
 
         Button playButton = (Button)findViewById(R.id.play_button);
-        Button informationsButton = (Button)findViewById(R.id.informations_button);
+        final Button informationsButton = (Button)findViewById(R.id.informations_button);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,8 @@ public class FirstActivity extends Activity {
                 InformationsDialog informationsShow = new InformationsDialog();
                 FragmentManager manager = getFragmentManager();
                 informationsShow.show(manager, "backToMenuFrag");
+
+
             }
         });
 

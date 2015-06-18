@@ -14,7 +14,7 @@
 
 
     <string name="undefined">Loading</string>
-    <string name="question">Cherche et ce personnage tu trouveras</string>
+    <string name="question">Find the right character you must</string>
     <string name="result">The good answer you found</string>
     <string name="continueGame">Next question</string>
 
@@ -23,7 +23,7 @@
     <!-- Dialogs messages -->
     <string name="backMenu">Leave the game ?</string>
     <string name="informations_popup">With six clues (eye color, height, hair color, skin color, gender, home planet), you have to found the right character amongst three proposition.</string>
-    <string name="howtoplay">HOW TO PLAY</string>
+    <string name="howtoplay">how to play</string>
 
 
 
