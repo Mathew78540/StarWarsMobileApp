@@ -15,7 +15,7 @@ struct GoogleImageApi {
     /*
     * Base URL API
     */
-    static let baseUrl = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=";
+    static let baseUrl = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&imgsz=medium&q=";
     
     /*
     ******

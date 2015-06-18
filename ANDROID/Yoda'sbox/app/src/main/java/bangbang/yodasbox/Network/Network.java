@@ -185,7 +185,7 @@ public class Network {
     }
 
 
-    public void downloadImage(String url, ImageView imgView, Context ctx)
+    public void downloadImage(String url, Context ctx)
     {
         new DownloadImageTask(ctx).execute(url);
     }
@@ -201,17 +201,17 @@ public class Network {
 
         protected Bitmap doInBackground(String... urls) {
 
-            Bitmap bMap = null;
             try {
                 InputStream in = new URL(urls[0]).openStream();
-                bMap = BitmapFactory.decodeStream(in);
+                Bitmap bMap = BitmapFactory.decodeStream(in);
                 in.close();
+                return bMap;
             } catch (Exception e) {
                 Log.e("Error", e.getMessage());
                 e.printStackTrace();
             }
 
-            return bMap;
+            return null;
         }
 
         protected void onPostExecute(Bitmap result) {

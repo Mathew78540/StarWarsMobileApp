@@ -80,8 +80,13 @@ public class QuestionActivity extends Activity  {
         {
             String[] listPersonagesStrings = extras.getString("personagesList").split(",");
 
+            System.out.println(listPersonagesStrings.toString());
             for (int i = 0; i < listPersonagesStrings.length; i++)
-                listPersonages.add(Integer.parseInt(listPersonagesStrings[i].replace("[","").replace("]","").trim()));
+            {
+                String personageNumberString = listPersonagesStrings[i].replace("[","").replace("]","").trim();
+                if(!personageNumberString.isEmpty())
+                    listPersonages.add(Integer.parseInt(personageNumberString));
+            }
         }
     }
 
@@ -209,7 +214,7 @@ public class QuestionActivity extends Activity  {
             winActivity.putExtra("namePersonage", hidePerson.getName());
             winActivity.putExtra("level", Integer.toString(level));
             winActivity.putExtra("personagesList", listPersonages.toString());
-            winActivity.putExtra("win", "true");
+            winActivity.putExtra("win", true);
 
             startActivity(winActivity);
         }
@@ -221,7 +226,7 @@ public class QuestionActivity extends Activity  {
             winActivity.putExtra("namePersonage", hidePerson.getName());
             winActivity.putExtra("level", Integer.toString(level));
             winActivity.putExtra("personagesList", new ArrayList<Integer>().toString());
-            winActivity.putExtra("win", "false");
+            winActivity.putExtra("win", false);
 
 
             startActivity(winActivity);
